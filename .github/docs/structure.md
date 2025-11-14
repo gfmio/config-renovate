@@ -11,8 +11,9 @@ config-renovate/
 ├── CLAUDE.md                      # AI assistant instructions
 │
 ├── default.json                   # Simple default preset (base only)
-├── renovate.json                  # Renovate config for this repo
+├── renovate.json                  # Renovate config for this repo (dogfooding!)
 ├── renovate.current.json          # Original monolithic config (reference)
+├── package.json                   # NPM package with renovate-config field for npm-based presets
 │
 ├── presets/                       # All reusable presets
 │   ├── base.json                  # Foundation: dashboard, labels, config migration
@@ -23,22 +24,38 @@ config-renovate/
 │   ├── ci/                        # CI/CD platform presets
 │   │   └── github-actions.json    # GitHub Actions automerge
 │   │
-│   └── javascript/                # JavaScript/TypeScript ecosystem
-│       ├── base.json              # Common JS/TS settings
-│       ├── library.json           # Library projects
-│       ├── node.json              # Node.js apps/CLIs/services
-│       ├── bun.json               # Bun runtime
-│       ├── frontend.json          # React/Vue/Svelte/Next.js/Vite
-│       ├── monorepo.json          # Monorepo workspaces
-│       ├── cloudflare-workers.json # Cloudflare Workers
+│   ├── javascript/                # JavaScript/TypeScript ecosystem
+│   │   ├── base.json              # Common JS/TS settings
+│   │   ├── library.json           # Library projects
+│   │   ├── node.json              # Node.js apps/CLIs/services
+│   │   ├── bun.json               # Bun runtime
+│   │   ├── frontend.json          # React/Vue/Svelte/Next.js/Vite
+│   │   ├── monorepo.json          # Monorepo workspaces
+│   │   ├── cloudflare-workers.json # Cloudflare Workers
+│   │   │
+│   │   └── tooling/               # Tool-specific grouping
+│   │       ├── typescript.json    # TypeScript & @types
+│   │       ├── biome.json         # Biome toolchain
+│   │       ├── eslint.json        # ESLint packages
+│   │       ├── prettier.json      # Prettier packages
+│   │       ├── vitest.json        # Vitest testing
+│   │       └── vitepress.json     # VitePress docs
+│   │
+│   └── python/                    # Python ecosystem
+│       ├── base.json              # Common Python settings
+│       ├── library.json           # PyPI libraries
+│       ├── app.json               # Applications/CLIs/services
+│       ├── jupyter.json           # Jupyter notebooks
+│       ├── ml.json                # ML/AI/LLM projects
 │       │
 │       └── tooling/               # Tool-specific grouping
-│           ├── typescript.json    # TypeScript & @types
-│           ├── biome.json         # Biome toolchain
-│           ├── eslint.json        # ESLint packages
-│           ├── prettier.json      # Prettier packages
-│           ├── vitest.json        # Vitest testing
-│           └── vitepress.json     # VitePress docs
+│           ├── pytest.json        # pytest testing
+│           ├── black.json         # Black formatter
+│           ├── ruff.json          # Ruff linter/formatter
+│           ├── mypy.json          # mypy type checker
+│           ├── poetry.json        # Poetry package manager
+│           ├── uv.json            # uv package manager
+│           └── sphinx.json        # Sphinx docs
 │
 └── examples/                      # Complete example configurations
     ├── typescript-library.json    # TS library with Biome + Vitest + tsup
@@ -46,7 +63,11 @@ config-renovate/
     ├── react-frontend.json        # React app with Vite
     ├── bun-library.json           # Bun library
     ├── cloudflare-worker.json     # Cloudflare Worker with Wrangler
-    └── monorepo.json              # JS/TS monorepo
+    ├── monorepo.json              # JS/TS monorepo
+    ├── python-library.json        # Python library with Poetry
+    ├── python-app.json            # Python app with uv
+    ├── python-jupyter.json        # Jupyter notebooks
+    └── python-ml.json             # ML/AI project
 ```
 
 ## Preset Categories
@@ -153,10 +174,15 @@ Each preset has a single, well-defined purpose:
 ### Easy to Extend
 Adding new languages or tools follows a consistent pattern documented in CONTRIBUTING.md.
 
+## Supported Languages
+
+Currently supported ecosystems:
+- ✅ **JavaScript/TypeScript** - npm, yarn, pnpm, bun
+- ✅ **Python** - pip, poetry, pipenv, pdm, uv
+
 ## Future Additions
 
 Planned language ecosystems:
-- Python (pip, poetry, pipenv)
 - Rust (cargo)
 - Go (go modules)
 - Swift (SPM)
