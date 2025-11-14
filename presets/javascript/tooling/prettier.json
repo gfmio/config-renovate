@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Prettier package grouping",
+  "packageRules": [
+    {
+      "description": "Group all Prettier packages",
+      "groupName": "Prettier",
+      "commitMessageTopic": "Prettier",
+      "matchPackageNames": ["/^prettier/"]
+    }
+  ]
+}
