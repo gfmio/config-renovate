@@ -1,16 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Example: Node.js application with ESLint and Prettier",
+  "description": "Example: Node.js app using full preset with disabled automerge",
   "extends": [
-    "github>gfmio/config-renovate:presets/base",
-    "github>gfmio/config-renovate:presets/security",
-    "github>gfmio/config-renovate:presets/automerge",
-    "github>gfmio/config-renovate:presets/schedule",
-    "github>gfmio/config-renovate:presets/javascript/base",
-    "github>gfmio/config-renovate:presets/javascript/node",
-    "github>gfmio/config-renovate:presets/javascript/tooling/typescript",
-    "github>gfmio/config-renovate:presets/javascript/tooling/eslint",
-    "github>gfmio/config-renovate:presets/javascript/tooling/prettier",
-    "github>gfmio/config-renovate:presets/ci/github-actions"
+    "@gfmio/config-renovate:presets/full/node-app"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": false
+    }
   ]
 }
