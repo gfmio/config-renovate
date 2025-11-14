@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "TypeScript package grouping and version management",
+  "packageRules": [
+    {
+      "description": "Group all TypeScript packages",
+      "groupName": "TypeScript",
+      "commitMessageTopic": "TypeScript",
+      "matchPackageNames": ["typescript", "/^@types\\//"]
+    },
+    {
+      "description": "Separate major TypeScript updates for breaking changes",
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "TypeScript (major)",
+      "commitMessageTopic": "TypeScript (major)",
+      "automerge": false
+    }
+  ]
+}
