@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Biome toolchain package grouping",
+  "packageRules": [
+    {
+      "description": "Group all Biome packages",
+      "groupName": "Biome",
+      "commitMessageTopic": "Biome",
+      "matchPackageNames": ["/^@biomejs\\//"]
+    }
+  ]
+}
