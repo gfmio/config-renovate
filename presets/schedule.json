@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Weekly update schedule (Monday mornings) to reduce PR noise",
+  "extends": [
+    ":prImmediately",
+    ":updateNotScheduled"
+  ],
+  "schedule": ["before 6am on Monday"],
+  "prCreation": "immediate",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on the first day of the month"]
+  }
+}
