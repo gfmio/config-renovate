@@ -1,5 +1,11 @@
 # Renovate Configuration Presets
 
+[![CI](https://github.com/gfmio/config-renovate/actions/workflows/ci.yml/badge.svg)](https://github.com/gfmio/config-renovate/actions/workflows/ci.yml)
+[![Release](https://github.com/gfmio/config-renovate/actions/workflows/release.yml/badge.svg)](https://github.com/gfmio/config-renovate/actions/workflows/release.yml)
+[![Documentation](https://github.com/gfmio/config-renovate/actions/workflows/docs.yml/badge.svg)](https://github.com/gfmio/config-renovate/actions/workflows/docs.yml)
+[![npm version](https://badge.fury.io/js/@gfmio%2Fconfig-renovate.svg)](https://www.npmjs.com/package/@gfmio/config-renovate)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A collection of composable [Renovate](https://docs.renovatebot.com) configuration presets for various programming languages and project types.
 
 ## Overview
@@ -8,7 +14,34 @@ This repository provides a modular system of Renovate presets that can be combin
 
 ## Quick Start
 
-Add a `renovate.json` file to your repository and extend the presets you need:
+### Simplest: Use a Full Preset
+
+For JavaScript/TypeScript projects (using npm):
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["@gfmio/config-renovate:presets/full/typescript-library"]
+}
+```
+
+### Advanced: Compose Individual Presets
+
+For JavaScript/TypeScript (npm):
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "@gfmio/config-renovate:presets/base",
+    "@gfmio/config-renovate:presets/security",
+    "@gfmio/config-renovate:presets/automerge",
+    "@gfmio/config-renovate:presets/schedule",
+    "@gfmio/config-renovate:presets/javascript/library",
+    "@gfmio/config-renovate:presets/javascript/tooling/typescript"
+  ]
+}
+```
 
 ```json
 {
@@ -27,6 +60,19 @@ Add a `renovate.json` file to your repository and extend the presets you need:
 ```
 
 ## Available Presets
+
+### Full Presets (Ready-to-Use)
+
+Complete configurations that combine all necessary presets for specific use cases:
+
+| Preset | Reference | Description |
+|--------|-----------|-------------|
+| `presets/full/typescript-library` | npm: `@gfmio/config-renovate:` | TypeScript library with Biome, Vitest, tsup |
+| `presets/full/node-app` | npm: `@gfmio/config-renovate:` | Node.js app with ESLint, Prettier |
+| `presets/full/react-frontend` | npm: `@gfmio/config-renovate:` | React app with Vite |
+| `presets/full/bun-library` | npm: `@gfmio/config-renovate:` | Bun library with Biome |
+| `presets/full/cloudflare-worker` | npm: `@gfmio/config-renovate:` | Cloudflare Worker with Wrangler |
+| `presets/full/monorepo` | npm: `@gfmio/config-renovate:` | JS/TS monorepo |
 
 ### Base Presets
 
