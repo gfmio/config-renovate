@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default preset - includes base config only. Extend with specific presets for your project type.",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base"
+  ]
+}
