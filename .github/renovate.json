@@ -1,11 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Renovate configuration for the config-renovate repository itself",
+  "description": "Renovate configuration for the config-renovate repository itself (dogfooding our own presets!)",
   "extends": [
-    "config:recommended"
-  ],
-  "timezone": "UTC",
-  "labels": ["dependencies"],
-  "dependencyDashboard": true,
-  "configMigration": true
+    "local>gfmio/config-renovate:presets/base",
+    "local>gfmio/config-renovate:presets/security",
+    "local>gfmio/config-renovate:presets/automerge",
+    "local>gfmio/config-renovate:presets/schedule",
+    "local>gfmio/config-renovate:presets/javascript/base",
+    "local>gfmio/config-renovate:presets/javascript/tooling/typescript",
+    "local>gfmio/config-renovate:presets/javascript/tooling/biome",
+    "local>gfmio/config-renovate:presets/ci/github-actions"
+  ]
 }
