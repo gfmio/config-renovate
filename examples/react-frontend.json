@@ -1,16 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Example: React frontend application with Vite",
+  "description": "Example: React app using full preset, just the defaults",
   "extends": [
-    "github>gfmio/config-renovate:presets/base",
-    "github>gfmio/config-renovate:presets/security",
-    "github>gfmio/config-renovate:presets/automerge",
-    "github>gfmio/config-renovate:presets/schedule",
-    "github>gfmio/config-renovate:presets/javascript/base",
-    "github>gfmio/config-renovate:presets/javascript/frontend",
-    "github>gfmio/config-renovate:presets/javascript/tooling/typescript",
-    "github>gfmio/config-renovate:presets/javascript/tooling/eslint",
-    "github>gfmio/config-renovate:presets/javascript/tooling/prettier",
-    "github>gfmio/config-renovate:presets/ci/github-actions"
+    "@gfmio/config-renovate:presets/full/react-frontend"
   ]
 }
