@@ -37,5 +37,13 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "renovate-config": {
+    "default": {
+      "description": "Default preset - includes base config only",
+      "extends": [
+        "@gfmio/config-renovate:presets/base"
+      ]
+    }
   }
 }
