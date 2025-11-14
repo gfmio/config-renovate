@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Bun library with Biome and Bun's built-in test runner",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base",
+    "github>gfmio/config-renovate:presets/security",
+    "github>gfmio/config-renovate:presets/automerge",
+    "github>gfmio/config-renovate:presets/schedule",
+    "github>gfmio/config-renovate:presets/javascript/base",
+    "github>gfmio/config-renovate:presets/javascript/library",
+    "github>gfmio/config-renovate:presets/javascript/bun",
+    "github>gfmio/config-renovate:presets/javascript/tooling/typescript",
+    "github>gfmio/config-renovate:presets/javascript/tooling/biome",
+    "github>gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}
