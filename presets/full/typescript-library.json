@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for TypeScript libraries with Biome, Vitest, and tsup",
+  "extends": [
+    "@gfmio/config-renovate:presets/base",
+    "@gfmio/config-renovate:presets/security",
+    "@gfmio/config-renovate:presets/automerge",
+    "@gfmio/config-renovate:presets/schedule",
+    "@gfmio/config-renovate:presets/javascript/base",
+    "@gfmio/config-renovate:presets/javascript/library",
+    "@gfmio/config-renovate:presets/javascript/tooling/typescript",
+    "@gfmio/config-renovate:presets/javascript/tooling/biome",
+    "@gfmio/config-renovate:presets/javascript/tooling/vitest",
+    "@gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}
