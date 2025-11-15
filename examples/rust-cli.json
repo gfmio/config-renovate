@@ -1,0 +1,8 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Rust CLI using full preset with custom schedule",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/rust-cli"
+  ],
+  "schedule": ["on the first day of the month"]
+}
