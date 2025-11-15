@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Dagger and Hilt dependency injection configuration",
+  "packageRules": [
+    {
+      "description": "Group Dagger dependencies",
+      "matchPackagePatterns": [
+        "^com\\.google\\.dagger:"
+      ],
+      "groupName": "Dagger",
+      "commitMessageTopic": "Dagger"
+    },
+    {
+      "description": "Group Hilt dependencies",
+      "matchPackagePatterns": [
+        "^com\\.google\\.dagger:hilt-",
+        "^androidx\\.hilt:"
+      ],
+      "groupName": "Hilt",
+      "commitMessageTopic": "Hilt"
+    }
+  ]
+}
