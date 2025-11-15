@@ -91,6 +91,10 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/full/go-cli` | GitHub: `github>gfmio/config-renovate:` | Go CLI with Cobra |
 | `presets/full/go-web-service` | GitHub: `github>gfmio/config-renovate:` | Go web service with Gin |
 | `presets/full/go-grpc-service` | GitHub: `github>gfmio/config-renovate:` | Go gRPC service |
+| `presets/full/swift-library` | GitHub: `github>gfmio/config-renovate:` | Swift library package |
+| `presets/full/swift-cli` | GitHub: `github>gfmio/config-renovate:` | Swift CLI application |
+| `presets/full/swift-ios-app` | GitHub: `github>gfmio/config-renovate:` | iOS/macOS app with SwiftUI |
+| `presets/full/swift-vapor` | GitHub: `github>gfmio/config-renovate:` | Vapor web application |
 
 ### Base Presets
 
@@ -191,6 +195,26 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/go/tooling/grpc` | gRPC and Protocol Buffers |
 | `presets/go/tooling/testify` | Testify testing framework |
 
+### Swift Ecosystem
+
+#### Core Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/swift/base` | Common settings for Swift Package Manager projects |
+| `presets/swift/library` | Swift library packages (uses version ranges) |
+| `presets/swift/app` | Swift applications and command-line tools |
+| `presets/swift/ios` | iOS/macOS applications with platform-specific considerations |
+
+#### Tooling Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/swift/tooling/vapor` | Vapor web framework |
+| `presets/swift/tooling/alamofire` | Alamofire HTTP networking |
+| `presets/swift/tooling/kingfisher` | Kingfisher image loading |
+| `presets/swift/tooling/swiftui` | SwiftUI-related packages (TCA, etc.) |
+
 ### CI/CD
 
 | Preset | Description |
@@ -225,6 +249,10 @@ See the [`examples/`](examples/) directory for complete configuration examples:
 - [`go-library.json`](examples/go-library.json) - Go library package
 - [`go-cli.json`](examples/go-cli.json) - Go CLI application with Cobra
 - [`go-web-service.json`](examples/go-web-service.json) - Go web service with Gin
+
+**Swift:**
+- [`swift-library.json`](examples/swift-library.json) - Swift library package
+- [`swift-ios-app.json`](examples/swift-ios-app.json) - iOS/macOS app with SwiftUI
 
 ## Design Principles
 
