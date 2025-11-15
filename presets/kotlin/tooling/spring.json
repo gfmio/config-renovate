@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Spring Framework and Spring Boot configuration",
+  "packageRules": [
+    {
+      "description": "Group Spring Boot dependencies",
+      "matchPackagePatterns": [
+        "^org\\.springframework\\.boot:",
+        "^org\\.springframework\\.boot\\."
+      ],
+      "groupName": "Spring Boot",
+      "commitMessageTopic": "Spring Boot"
+    },
+    {
+      "description": "Group Spring Framework dependencies",
+      "matchPackagePatterns": [
+        "^org\\.springframework:",
+        "^org\\.springframework\\."
+      ],
+      "excludePackagePatterns": [
+        "^org\\.springframework\\.boot:"
+      ],
+      "groupName": "Spring Framework",
+      "commitMessageTopic": "Spring Framework"
+    },
+    {
+      "description": "Group Spring Security dependencies",
+      "matchPackagePatterns": [
+        "^org\\.springframework\\.security:"
+      ],
+      "groupName": "Spring Security",
+      "commitMessageTopic": "Spring Security"
+    },
+    {
+      "description": "Group Spring Data dependencies",
+      "matchPackagePatterns": [
+        "^org\\.springframework\\.data:"
+      ],
+      "groupName": "Spring Data",
+      "commitMessageTopic": "Spring Data"
+    }
+  ]
+}
