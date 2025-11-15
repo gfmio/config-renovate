@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Nix flake configuration with automatic lock file updates",
+  "extends": [
+    "github>gfmio/config-renovate:presets/nix/base"
+  ],
+  "packageRules": [
+    {
+      "description": "Enable lock file maintenance for flake.lock",
+      "matchManagers": ["nix"],
+      "lockFileMaintenance": {
+        "enabled": true
+      }
+    },
+    {
+      "description": "Group all flake.lock updates together",
+      "matchManagers": ["nix"],
+      "matchFiles": ["flake.lock"],
+      "groupName": "Nix flake.lock",
+      "commitMessageTopic": "Nix flake.lock"
+    }
+  ]
+}
