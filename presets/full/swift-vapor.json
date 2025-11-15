@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for Vapor web applications",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base",
+    "github>gfmio/config-renovate:presets/security",
+    "github>gfmio/config-renovate:presets/automerge",
+    "github>gfmio/config-renovate:presets/schedule",
+    "github>gfmio/config-renovate:presets/swift/base",
+    "github>gfmio/config-renovate:presets/swift/app",
+    "github>gfmio/config-renovate:presets/swift/tooling/vapor",
+    "github>gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}
