@@ -99,6 +99,10 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/full/kotlin-spring-service` | GitHub: `github>gfmio/config-renovate:` | Kotlin Spring Boot service |
 | `presets/full/kotlin-ktor-service` | GitHub: `github>gfmio/config-renovate:` | Kotlin Ktor service |
 | `presets/full/android-app` | GitHub: `github>gfmio/config-renovate:` | Android app with Compose and Hilt |
+| `presets/full/nix-flake` | GitHub: `github>gfmio/config-renovate:` | Nix flake project |
+| `presets/full/nix-devshell` | GitHub: `github>gfmio/config-renovate:` | Nix development shell |
+| `presets/full/nixos` | GitHub: `github>gfmio/config-renovate:` | NixOS system configuration |
+| `presets/full/nix-darwin` | GitHub: `github>gfmio/config-renovate:` | nix-darwin macOS configuration |
 
 ### Base Presets
 
@@ -242,6 +246,28 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/kotlin/tooling/dagger` | Dagger and Hilt dependency injection |
 | `presets/kotlin/tooling/room` | Android Room database |
 
+### Nix Ecosystem
+
+#### Core Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/nix/base` | Common settings for Nix flakes and derivations |
+| `presets/nix/flake` | Nix flake configuration with automatic lock file updates |
+| `presets/nix/devshell` | Nix development shell configuration |
+| `presets/nix/nixos` | NixOS system configuration with stability days for major updates |
+
+#### Tooling Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/nix/tooling/home-manager` | Home Manager user environment management |
+| `presets/nix/tooling/darwin` | nix-darwin for macOS system configuration |
+| `presets/nix/tooling/flake-parts` | flake-parts modular flake framework |
+| `presets/nix/tooling/devenv` | devenv.sh development environment framework |
+| `presets/nix/tooling/fenix` | fenix Rust toolchain for Nix |
+| `presets/nix/tooling/nixpkgs-fmt` | Nix formatters (nixpkgs-fmt, alejandra, nixfmt) |
+
 ### CI/CD
 
 | Preset | Description |
@@ -262,17 +288,20 @@ See the [`examples/`](examples/) directory for complete configuration examples:
 - [`monorepo.json`](examples/monorepo.json) - JavaScript/TypeScript monorepo
 
 **Python:**
+
 - [`python-library.json`](examples/python-library.json) - Python library with Poetry, pytest, mypy, and ruff
 - [`python-app.json`](examples/python-app.json) - Python application with uv and ruff
 - [`python-jupyter.json`](examples/python-jupyter.json) - Jupyter notebook project for data science
 - [`python-ml.json`](examples/python-ml.json) - ML/AI project with PyTorch and Hugging Face Transformers
 
 **Rust:**
+
 - [`rust-library.json`](examples/rust-library.json) - Rust library with Serde and Tokio
 - [`rust-cli.json`](examples/rust-cli.json) - Rust CLI application with Clap
 - [`rust-web-service.json`](examples/rust-web-service.json) - Rust web service with Axum and Tokio
 
 **Go:**
+
 - [`go-library.json`](examples/go-library.json) - Go library package
 - [`go-cli.json`](examples/go-cli.json) - Go CLI application with Cobra
 - [`go-web-service.json`](examples/go-web-service.json) - Go web service with Gin
@@ -287,6 +316,12 @@ See the [`examples/`](examples/) directory for complete configuration examples:
 - [`kotlin-library.json`](examples/kotlin-library.json) - Kotlin library with Coroutines
 - [`kotlin-spring-service.json`](examples/kotlin-spring-service.json) - Kotlin Spring Boot service with custom grouping
 - [`android-app.json`](examples/android-app.json) - Android app with extended stability days
+
+**Nix:**
+
+- [`nix-flake.json`](examples/nix-flake.json) - Nix flake project
+- [`nixos.json`](examples/nixos.json) - NixOS configuration with extended stability
+- [`nix-darwin.json`](examples/nix-darwin.json) - nix-darwin macOS configuration with flake-parts
 
 ## Design Principles
 
