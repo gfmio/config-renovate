@@ -87,6 +87,10 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/full/rust-cli` | GitHub: `github>gfmio/config-renovate:` | Rust CLI with Clap |
 | `presets/full/rust-web-service` | GitHub: `github>gfmio/config-renovate:` | Rust web service with Axum |
 | `presets/full/rust-wasm` | GitHub: `github>gfmio/config-renovate:` | Rust WASM with wasm-bindgen |
+| `presets/full/go-library` | GitHub: `github>gfmio/config-renovate:` | Go library package |
+| `presets/full/go-cli` | GitHub: `github>gfmio/config-renovate:` | Go CLI with Cobra |
+| `presets/full/go-web-service` | GitHub: `github>gfmio/config-renovate:` | Go web service with Gin |
+| `presets/full/go-grpc-service` | GitHub: `github>gfmio/config-renovate:` | Go gRPC service |
 
 ### Base Presets
 
@@ -167,6 +171,26 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/rust/tooling/tracing` | Tracing instrumentation framework |
 | `presets/rust/tooling/axum` | Axum web framework |
 
+### Go Ecosystem
+
+#### Core Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/go/base` | Common settings for Go modules projects |
+| `presets/go/library` | Go library packages (uses compatible versions) |
+| `presets/go/app` | Go applications, CLIs, and services |
+
+#### Tooling Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/go/tooling/gin` | Gin web framework |
+| `presets/go/tooling/echo` | Echo web framework |
+| `presets/go/tooling/cobra` | Cobra CLI framework and Viper |
+| `presets/go/tooling/grpc` | gRPC and Protocol Buffers |
+| `presets/go/tooling/testify` | Testify testing framework |
+
 ### CI/CD
 
 | Preset | Description |
@@ -196,6 +220,11 @@ See the [`examples/`](examples/) directory for complete configuration examples:
 - [`rust-library.json`](examples/rust-library.json) - Rust library with Serde and Tokio
 - [`rust-cli.json`](examples/rust-cli.json) - Rust CLI application with Clap
 - [`rust-web-service.json`](examples/rust-web-service.json) - Rust web service with Axum and Tokio
+
+**Go:**
+- [`go-library.json`](examples/go-library.json) - Go library package
+- [`go-cli.json`](examples/go-cli.json) - Go CLI application with Cobra
+- [`go-web-service.json`](examples/go-web-service.json) - Go web service with Gin
 
 ## Design Principles
 
