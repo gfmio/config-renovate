@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Axum web framework package grouping",
+  "packageRules": [
+    {
+      "description": "Group Axum packages",
+      "groupName": "Axum",
+      "commitMessageTopic": "Axum",
+      "matchPackageNames": ["axum", "axum-extra", "axum-core", "tower", "tower-http"]
+    }
+  ]
+}
