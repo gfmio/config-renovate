@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Black code formatter package grouping",
+  "packageRules": [
+    {
+      "description": "Group Black and related packages",
+      "groupName": "Black",
+      "commitMessageTopic": "Black",
+      "matchPackageNames": [
+        "black",
+        "blacken-docs"
+      ]
+    }
+  ]
+}
