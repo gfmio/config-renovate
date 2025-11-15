@@ -1,0 +1,50 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Base Kotlin/Java configuration for Gradle and Maven projects",
+  "extends": [
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Gradle wrapper updates",
+      "matchDatasources": ["gradle-wrapper"],
+      "groupName": "Gradle wrapper",
+      "commitMessageTopic": "Gradle wrapper"
+    },
+    {
+      "description": "Group Kotlin version updates",
+      "matchPackageNames": [
+        "org.jetbrains.kotlin:kotlin-gradle-plugin",
+        "org.jetbrains.kotlin.jvm",
+        "org.jetbrains.kotlin.android",
+        "org.jetbrains.kotlin.multiplatform",
+        "/^org\\.jetbrains\\.kotlin:kotlin-/"
+      ],
+      "groupName": "Kotlin",
+      "commitMessageTopic": "Kotlin"
+    },
+    {
+      "description": "Separate major Kotlin version updates",
+      "matchPackageNames": [
+        "org.jetbrains.kotlin:kotlin-gradle-plugin",
+        "org.jetbrains.kotlin.jvm",
+        "org.jetbrains.kotlin.android"
+      ],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "description": "Group Java/JDK version updates",
+      "matchDatasources": ["java-version", "adoptium-java"],
+      "groupName": "Java/JDK",
+      "commitMessageTopic": "Java/JDK"
+    },
+    {
+      "description": "Separate major Java version updates",
+      "matchDatasources": ["java-version", "adoptium-java"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}
