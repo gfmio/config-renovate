@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for Android applications",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base",
+    "github>gfmio/config-renovate:presets/security",
+    "github>gfmio/config-renovate:presets/automerge",
+    "github>gfmio/config-renovate:presets/schedule",
+    "github>gfmio/config-renovate:presets/kotlin/base",
+    "github>gfmio/config-renovate:presets/kotlin/android",
+    "github>gfmio/config-renovate:presets/kotlin/tooling/coroutines",
+    "github>gfmio/config-renovate:presets/kotlin/tooling/serialization",
+    "github>gfmio/config-renovate:presets/kotlin/tooling/testing",
+    "github>gfmio/config-renovate:presets/kotlin/tooling/dagger",
+    "github>gfmio/config-renovate:presets/kotlin/tooling/room",
+    "github>gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}
