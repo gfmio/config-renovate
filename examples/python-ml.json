@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: ML/AI project using full preset with extended stability",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/python-ml"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["torch", "tensorflow"],
+      "stabilityDays": 7
+    }
+  ]
+}
