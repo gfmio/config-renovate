@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Serde serialization framework package grouping",
+  "packageRules": [
+    {
+      "description": "Group all Serde packages",
+      "groupName": "Serde",
+      "commitMessageTopic": "Serde",
+      "matchPackageNames": [
+        "serde",
+        "serde_json",
+        "serde_derive",
+        "/^serde_/"
+      ]
+    }
+  ]
+}
