@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "NixOS system configuration",
+  "extends": [
+    "github>gfmio/config-renovate:presets/nix/flake"
+  ],
+  "packageRules": [
+    {
+      "description": "Group NixOS-related inputs",
+      "matchManagers": ["nix"],
+      "matchPackageNames": [
+        "nixpkgs",
+        "nixos-hardware"
+      ],
+      "groupName": "NixOS",
+      "commitMessageTopic": "NixOS"
+    },
+    {
+      "description": "Add stability days for NixOS major updates",
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["nixpkgs"],
+      "matchUpdateTypes": ["major"],
+      "stabilityDays": 7
+    }
+  ]
+}
