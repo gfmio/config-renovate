@@ -25,6 +25,15 @@ For JavaScript/TypeScript projects (using npm):
 }
 ```
 
+For Python/Rust/Go projects (using GitHub):
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>gfmio/config-renovate:presets/full/python-library"]
+}
+```
+
 ### Advanced: Compose Individual Presets
 
 For JavaScript/TypeScript (npm):
@@ -43,18 +52,15 @@ For JavaScript/TypeScript (npm):
 }
 ```
 
+For Python (GitHub):
+
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>gfmio/config-renovate:presets/base",
     "github>gfmio/config-renovate:presets/security",
-    "github>gfmio/config-renovate:presets/automerge",
-    "github>gfmio/config-renovate:presets/schedule",
-    "github>gfmio/config-renovate:presets/javascript/library",
-    "github>gfmio/config-renovate:presets/javascript/tooling/typescript",
-    "github>gfmio/config-renovate:presets/javascript/tooling/biome",
-    "github>gfmio/config-renovate:presets/ci/github-actions"
+    "github>gfmio/config-renovate:presets/python/library"
   ]
 }
 ```
@@ -73,6 +79,10 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/full/bun-library` | npm: `@gfmio/config-renovate:` | Bun library with Biome |
 | `presets/full/cloudflare-worker` | npm: `@gfmio/config-renovate:` | Cloudflare Worker with Wrangler |
 | `presets/full/monorepo` | npm: `@gfmio/config-renovate:` | JS/TS monorepo |
+| `presets/full/python-library` | GitHub: `github>gfmio/config-renovate:` | Python library with Poetry |
+| `presets/full/python-app` | GitHub: `github>gfmio/config-renovate:` | Python app with uv |
+| `presets/full/python-jupyter` | GitHub: `github>gfmio/config-renovate:` | Jupyter notebooks |
+| `presets/full/python-ml` | GitHub: `github>gfmio/config-renovate:` | ML/AI with PyTorch/Transformers |
 
 ### Base Presets
 
@@ -108,6 +118,30 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/javascript/tooling/vitest` | Vitest testing framework |
 | `presets/javascript/tooling/vitepress` | VitePress documentation |
 
+### Python Ecosystem
+
+#### Core Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/python/base` | Common settings for pip/poetry/pipenv/pdm/uv projects |
+| `presets/python/library` | Python libraries published to PyPI (uses version ranges) |
+| `presets/python/app` | Python applications, CLIs, and services (pins dependencies) |
+| `presets/python/jupyter` | Jupyter notebook projects with notebook-specific grouping |
+| `presets/python/ml` | ML/AI/LLM projects (PyTorch, TensorFlow, Transformers, LangChain) |
+
+#### Tooling Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/python/tooling/pytest` | pytest testing framework |
+| `presets/python/tooling/black` | Black code formatter |
+| `presets/python/tooling/ruff` | Ruff linter and formatter |
+| `presets/python/tooling/mypy` | mypy type checker and type stubs |
+| `presets/python/tooling/poetry` | Poetry package manager |
+| `presets/python/tooling/uv` | uv package manager |
+| `presets/python/tooling/sphinx` | Sphinx documentation generator |
+
 ### CI/CD
 
 | Preset | Description |
@@ -118,12 +152,21 @@ Complete configurations that combine all necessary presets for specific use case
 
 See the [`examples/`](examples/) directory for complete configuration examples:
 
+**JavaScript/TypeScript:**
+
 - [`typescript-library.json`](examples/typescript-library.json) - TypeScript library with Biome, Vitest, and tsup
 - [`node-app.json`](examples/node-app.json) - Node.js application with ESLint and Prettier
 - [`react-frontend.json`](examples/react-frontend.json) - React frontend with Vite
 - [`bun-library.json`](examples/bun-library.json) - Bun library with built-in test runner
 - [`cloudflare-worker.json`](examples/cloudflare-worker.json) - Cloudflare Worker with Wrangler
 - [`monorepo.json`](examples/monorepo.json) - JavaScript/TypeScript monorepo
+
+**Python:**
+
+- [`python-library.json`](examples/python-library.json) - Python library with Poetry, pytest, mypy, and ruff
+- [`python-app.json`](examples/python-app.json) - Python application with uv and ruff
+- [`python-jupyter.json`](examples/python-jupyter.json) - Jupyter notebook project for data science
+- [`python-ml.json`](examples/python-ml.json) - ML/AI project with PyTorch and Hugging Face Transformers
 
 ## Design Principles
 
@@ -236,11 +279,28 @@ Override any setting in your project's configuration:
 }
 ```
 
+## npm Package
+
+When published to npm, this package includes:
+
+- All preset configurations (`presets/`)
+- The default configuration (`default.json`)
+
+**Note:** Example configurations are only available via GitHub references and are not published to npm. They serve as documentation and reference material.
+
+You can reference any preset file from the npm package:
+
+```json
+{
+  "extends": ["@gfmio/config-renovate:presets/python/ml"]
+}
+```
+
 ## Contributing
 
 Contributions welcome! Feel free to open issues or PRs for:
 
-- New language ecosystems (Python, Rust, Go, etc.)
+- New language ecosystems (Rust, Go, Swift, etc.)
 - Additional tooling presets
 - Improved configurations
 - Bug fixes
