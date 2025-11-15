@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "nixpkgs-fmt and other Nix formatters",
+  "packageRules": [
+    {
+      "description": "Group Nix formatter inputs",
+      "matchManagers": ["nix"],
+      "matchPackageNames": [
+        "nixpkgs-fmt",
+        "alejandra",
+        "nixfmt"
+      ],
+      "groupName": "Nix formatters",
+      "commitMessageTopic": "Nix formatters"
+    }
+  ]
+}
