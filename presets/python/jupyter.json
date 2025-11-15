@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Configuration for Jupyter notebook projects",
+  "extends": [
+    ":semanticCommits",
+    ":combinePatchMinorReleases"
+  ],
+  "commitMessagePrefix": "chore(deps):",
+  "packageRules": [
+    {
+      "description": "Group Jupyter-related packages",
+      "matchPackageNames": [
+        "jupyter",
+        "jupyterlab",
+        "notebook",
+        "ipython",
+        "ipykernel",
+        "ipywidgets",
+        "/^jupyter-/",
+        "/^jupyterlab-/"
+      ],
+      "groupName": "Jupyter",
+      "commitMessageTopic": "Jupyter"
+    },
+    {
+      "description": "Group data science notebook extensions",
+      "matchPackageNames": [
+        "nbconvert",
+        "nbformat",
+        "nbclient",
+        "nbdime"
+      ],
+      "groupName": "Jupyter notebook tools",
+      "commitMessageTopic": "Jupyter notebook tools"
+    }
+  ]
+}
