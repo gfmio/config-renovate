@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: NixOS configuration with extended stability for major updates",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/nixos"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["nixpkgs"],
+      "matchUpdateTypes": ["major"],
+      "stabilityDays": 14
+    }
+  ]
+}
