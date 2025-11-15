@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "nix-darwin configuration for macOS",
+  "packageRules": [
+    {
+      "description": "Group nix-darwin flake input",
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["nix-darwin", "darwin"],
+      "groupName": "nix-darwin",
+      "commitMessageTopic": "nix-darwin"
+    }
+  ]
+}
