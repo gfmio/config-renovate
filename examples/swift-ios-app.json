@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: iOS app using full preset with extended stability",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/swift-ios-app"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "stabilityDays": 7
+    }
+  ]
+}
