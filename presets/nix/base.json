@@ -1,0 +1,39 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Base Nix configuration for Nix flakes and derivations",
+  "extends": [
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "packageRules": [
+    {
+      "description": "Enable Nix manager",
+      "matchManagers": ["nix"],
+      "enabled": true
+    },
+    {
+      "description": "Group nixpkgs input updates",
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["nixpkgs"],
+      "groupName": "nixpkgs",
+      "commitMessageTopic": "nixpkgs"
+    },
+    {
+      "description": "Separate major nixpkgs updates (e.g., different NixOS releases)",
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["nixpkgs"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "description": "Group flake inputs by source",
+      "matchManagers": ["nix"],
+      "excludePackageNames": ["nixpkgs"],
+      "groupName": "Nix flake inputs",
+      "commitMessageTopic": "Nix flake inputs"
+    }
+  ],
+  "nix": {
+    "enabled": true
+  }
+}
