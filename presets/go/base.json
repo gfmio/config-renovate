@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Base Go configuration for Go modules projects",
+  "extends": [
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Go toolchain updates",
+      "matchDatasources": ["golang-version"],
+      "groupName": "Go toolchain",
+      "commitMessageTopic": "Go toolchain"
+    },
+    {
+      "description": "Separate major Go version updates",
+      "matchDatasources": ["golang-version"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "description": "Handle Go major version in import paths (v2, v3, etc.)",
+      "matchManagers": ["gomod"],
+      "matchUpdateTypes": ["major"],
+      "enabled": true
+    }
+  ],
+  "postUpdateOptions": ["gomodTidy"]
+}
