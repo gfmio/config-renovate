@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "mypy type checker package grouping",
+  "packageRules": [
+    {
+      "description": "Group mypy and type stub packages",
+      "groupName": "mypy",
+      "commitMessageTopic": "mypy",
+      "matchPackageNames": [
+        "mypy",
+        "/^types-/"
+      ]
+    }
+  ]
+}
