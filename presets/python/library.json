@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Configuration for Python library projects published to PyPI",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable"
+  ],
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageAction": "update",
+  "commitMessageTopic": "{{depName}}",
+  "packageRules": [
+    {
+      "description": "Use version ranges for libraries (more permissive)",
+      "matchDepTypes": ["dependencies"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "description": "Pin build tools for reproducibility",
+      "matchPackageNames": ["build", "setuptools", "wheel", "twine", "hatchling", "poetry-core"],
+      "rangeStrategy": "pin"
+    }
+  ]
+}
