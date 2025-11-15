@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "fenix Rust toolchain for Nix",
+  "packageRules": [
+    {
+      "description": "Group fenix flake input",
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["fenix"],
+      "groupName": "fenix",
+      "commitMessageTopic": "fenix Rust toolchain"
+    }
+  ]
+}
