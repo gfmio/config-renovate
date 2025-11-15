@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Home Manager configuration",
+  "packageRules": [
+    {
+      "description": "Group Home Manager flake input",
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["home-manager"],
+      "groupName": "Home Manager",
+      "commitMessageTopic": "Home Manager"
+    },
+    {
+      "description": "Keep Home Manager in sync with nixpkgs version",
+      "matchManagers": ["nix"],
+      "matchPackageNames": ["home-manager"],
+      "followTag": "release-24.05"
+    }
+  ]
+}
