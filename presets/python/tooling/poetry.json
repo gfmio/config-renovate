@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Poetry package manager specific configuration",
+  "packageRules": [
+    {
+      "description": "Group Poetry packages",
+      "groupName": "Poetry",
+      "commitMessageTopic": "Poetry",
+      "matchPackageNames": [
+        "poetry",
+        "poetry-core",
+        "poetry-plugin-export",
+        "/^poetry-/"
+      ]
+    },
+    {
+      "description": "Separate major Poetry updates",
+      "matchPackageNames": ["poetry"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}
