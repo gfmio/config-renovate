@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "SwiftUI-related packages grouping",
+  "packageRules": [
+    {
+      "description": "Group SwiftUI-related packages",
+      "groupName": "SwiftUI",
+      "commitMessageTopic": "SwiftUI",
+      "matchPackageNames": [
+        "https://github.com/pointfreeco/swift-composable-architecture",
+        "https://github.com/pointfreeco/swiftui-navigation"
+      ]
+    }
+  ]
+}
