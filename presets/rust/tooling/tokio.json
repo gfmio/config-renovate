@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Tokio async runtime package grouping",
+  "packageRules": [
+    {
+      "description": "Group all Tokio packages",
+      "groupName": "Tokio",
+      "commitMessageTopic": "Tokio",
+      "matchPackageNames": ["/^tokio/"]
+    }
+  ]
+}
