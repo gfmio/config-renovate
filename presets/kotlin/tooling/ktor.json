@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Ktor framework configuration for Kotlin web services",
+  "packageRules": [
+    {
+      "description": "Group Ktor dependencies",
+      "matchPackagePatterns": [
+        "^io\\.ktor:",
+        "^io\\.ktor\\."
+      ],
+      "groupName": "Ktor",
+      "commitMessageTopic": "Ktor"
+    }
+  ]
+}
