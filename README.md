@@ -95,6 +95,10 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/full/swift-cli` | GitHub: `github>gfmio/config-renovate:` | Swift CLI application |
 | `presets/full/swift-ios-app` | GitHub: `github>gfmio/config-renovate:` | iOS/macOS app with SwiftUI |
 | `presets/full/swift-vapor` | GitHub: `github>gfmio/config-renovate:` | Vapor web application |
+| `presets/full/kotlin-library` | GitHub: `github>gfmio/config-renovate:` | Kotlin library with Coroutines |
+| `presets/full/kotlin-spring-service` | GitHub: `github>gfmio/config-renovate:` | Kotlin Spring Boot service |
+| `presets/full/kotlin-ktor-service` | GitHub: `github>gfmio/config-renovate:` | Kotlin Ktor service |
+| `presets/full/android-app` | GitHub: `github>gfmio/config-renovate:` | Android app with Compose and Hilt |
 
 ### Base Presets
 
@@ -215,6 +219,29 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/swift/tooling/kingfisher` | Kingfisher image loading |
 | `presets/swift/tooling/swiftui` | SwiftUI-related packages (TCA, etc.) |
 
+### Kotlin/Java Ecosystem
+
+#### Core Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/kotlin/base` | Common settings for Gradle and Maven projects |
+| `presets/kotlin/library` | Kotlin/Java libraries published to Maven Central (uses version ranges) |
+| `presets/kotlin/app` | Kotlin/Java applications, CLIs, and backend services (pins dependencies) |
+| `presets/kotlin/android` | Android applications with AndroidX and Compose support |
+
+#### Tooling Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/kotlin/tooling/spring` | Spring Boot and Spring Framework |
+| `presets/kotlin/tooling/ktor` | Ktor web framework |
+| `presets/kotlin/tooling/coroutines` | Kotlin Coroutines |
+| `presets/kotlin/tooling/serialization` | Kotlin Serialization, Jackson, Gson |
+| `presets/kotlin/tooling/testing` | JUnit, Kotest, MockK, Mockito, AssertJ |
+| `presets/kotlin/tooling/dagger` | Dagger and Hilt dependency injection |
+| `presets/kotlin/tooling/room` | Android Room database |
+
 ### CI/CD
 
 | Preset | Description |
@@ -251,8 +278,15 @@ See the [`examples/`](examples/) directory for complete configuration examples:
 - [`go-web-service.json`](examples/go-web-service.json) - Go web service with Gin
 
 **Swift:**
+
 - [`swift-library.json`](examples/swift-library.json) - Swift library package
 - [`swift-ios-app.json`](examples/swift-ios-app.json) - iOS/macOS app with SwiftUI
+
+**Kotlin/Java:**
+
+- [`kotlin-library.json`](examples/kotlin-library.json) - Kotlin library with Coroutines
+- [`kotlin-spring-service.json`](examples/kotlin-spring-service.json) - Kotlin Spring Boot service with custom grouping
+- [`android-app.json`](examples/android-app.json) - Android app with extended stability days
 
 ## Design Principles
 
