@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for Go CLI applications with Cobra",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base",
+    "github>gfmio/config-renovate:presets/security",
+    "github>gfmio/config-renovate:presets/automerge",
+    "github>gfmio/config-renovate:presets/schedule",
+    "github>gfmio/config-renovate:presets/go/base",
+    "github>gfmio/config-renovate:presets/go/app",
+    "github>gfmio/config-renovate:presets/go/tooling/cobra",
+    "github>gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}
