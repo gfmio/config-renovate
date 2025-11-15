@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Python app using full preset, just the defaults",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/python-app"
+  ]
+}
