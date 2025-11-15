@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Android Room database configuration",
+  "packageRules": [
+    {
+      "description": "Group Room dependencies",
+      "matchPackagePatterns": [
+        "^androidx\\.room:"
+      ],
+      "groupName": "Room",
+      "commitMessageTopic": "Room"
+    }
+  ]
+}
