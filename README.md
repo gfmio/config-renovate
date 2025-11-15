@@ -83,6 +83,10 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/full/python-app` | GitHub: `github>gfmio/config-renovate:` | Python app with uv |
 | `presets/full/python-jupyter` | GitHub: `github>gfmio/config-renovate:` | Jupyter notebooks |
 | `presets/full/python-ml` | GitHub: `github>gfmio/config-renovate:` | ML/AI with PyTorch/Transformers |
+| `presets/full/rust-library` | GitHub: `github>gfmio/config-renovate:` | Rust library with Serde, Tokio |
+| `presets/full/rust-cli` | GitHub: `github>gfmio/config-renovate:` | Rust CLI with Clap |
+| `presets/full/rust-web-service` | GitHub: `github>gfmio/config-renovate:` | Rust web service with Axum |
+| `presets/full/rust-wasm` | GitHub: `github>gfmio/config-renovate:` | Rust WASM with wasm-bindgen |
 
 ### Base Presets
 
@@ -142,6 +146,27 @@ Complete configurations that combine all necessary presets for specific use case
 | `presets/python/tooling/uv` | uv package manager |
 | `presets/python/tooling/sphinx` | Sphinx documentation generator |
 
+### Rust Ecosystem
+
+#### Core Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/rust/base` | Common settings for Cargo projects |
+| `presets/rust/library` | Rust library crates published to crates.io (uses version ranges) |
+| `presets/rust/binary` | Rust binary crates - CLIs, applications, services (pins dependencies) |
+| `presets/rust/wasm` | Rust WASM projects with wasm-bindgen configuration |
+
+#### Tooling Presets
+
+| Preset | Description |
+|--------|-------------|
+| `presets/rust/tooling/tokio` | Tokio async runtime |
+| `presets/rust/tooling/serde` | Serde serialization framework |
+| `presets/rust/tooling/clap` | Clap CLI framework |
+| `presets/rust/tooling/tracing` | Tracing instrumentation framework |
+| `presets/rust/tooling/axum` | Axum web framework |
+
 ### CI/CD
 
 | Preset | Description |
@@ -162,11 +187,15 @@ See the [`examples/`](examples/) directory for complete configuration examples:
 - [`monorepo.json`](examples/monorepo.json) - JavaScript/TypeScript monorepo
 
 **Python:**
-
 - [`python-library.json`](examples/python-library.json) - Python library with Poetry, pytest, mypy, and ruff
 - [`python-app.json`](examples/python-app.json) - Python application with uv and ruff
 - [`python-jupyter.json`](examples/python-jupyter.json) - Jupyter notebook project for data science
 - [`python-ml.json`](examples/python-ml.json) - ML/AI project with PyTorch and Hugging Face Transformers
+
+**Rust:**
+- [`rust-library.json`](examples/rust-library.json) - Rust library with Serde and Tokio
+- [`rust-cli.json`](examples/rust-cli.json) - Rust CLI application with Clap
+- [`rust-web-service.json`](examples/rust-web-service.json) - Rust web service with Axum and Tokio
 
 ## Design Principles
 
