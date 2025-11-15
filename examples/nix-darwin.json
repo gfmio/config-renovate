@@ -1,0 +1,8 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: nix-darwin macOS configuration with flake-parts",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/nix-darwin",
+    "github>gfmio/config-renovate:presets/nix/tooling/flake-parts"
+  ]
+}
