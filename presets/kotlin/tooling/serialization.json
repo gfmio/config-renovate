@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Kotlin Serialization and common serialization libraries",
+  "packageRules": [
+    {
+      "description": "Group Kotlin Serialization dependencies",
+      "matchPackagePatterns": [
+        "^org\\.jetbrains\\.kotlinx:kotlinx-serialization-",
+        "^org\\.jetbrains\\.kotlin\\.plugin\\.serialization"
+      ],
+      "groupName": "Kotlin Serialization",
+      "commitMessageTopic": "Kotlin Serialization"
+    },
+    {
+      "description": "Group Jackson dependencies",
+      "matchPackagePatterns": [
+        "^com\\.fasterxml\\.jackson\\."
+      ],
+      "groupName": "Jackson",
+      "commitMessageTopic": "Jackson"
+    },
+    {
+      "description": "Group Gson dependencies",
+      "matchPackageNames": [
+        "com.google.code.gson:gson"
+      ],
+      "groupName": "Gson",
+      "commitMessageTopic": "Gson"
+    }
+  ]
+}
