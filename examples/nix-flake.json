@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Nix flake project using full preset",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/nix-flake"
+  ]
+}
