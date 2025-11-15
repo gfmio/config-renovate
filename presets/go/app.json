@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Configuration for Go applications, CLIs, and services",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable"
+  ],
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageAction": "update",
+  "commitMessageTopic": "{{depName}}",
+  "packageRules": [
+    {
+      "description": "Applications can use latest versions",
+      "matchManagers": ["gomod"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "description": "Update go.sum regularly",
+      "matchManagers": ["gomod"],
+      "lockFileMaintenance": {
+        "enabled": true,
+        "schedule": ["before 6am on the first day of the month"]
+      }
+    }
+  ]
+}
