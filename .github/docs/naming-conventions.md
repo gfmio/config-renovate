@@ -36,26 +36,57 @@ Located in `presets/<language>/`:
 
 Located in `presets/<language>/`:
 
-**Standard Names** (use these consistently):
+**Naming Principle: Specificity Over Generic Terms**
 
-- `library.json` - For libraries/packages published to package registries
-- `app.json` - For applications, services, and end-user programs
-- `cli.json` - For command-line interface applications (optional, can use `app.json`)
+Choose the most specific, informative name for each preset. Prefer:
 
-**Specialized Names** (ecosystem-specific):
+- **Runtime/environment names** (node, bun, browser) over generic "app"
+- **Ecosystem terminology** (binary for Rust) over imposed standards
+- **Platform names** (ios, android) over generic terms
+- **Domain-specific names** (jupyter, ml) for specialized use cases
 
-- `frontend.json` - Frontend frameworks (JavaScript ecosystem)
-- `monorepo.json` - Monorepo configuration
-- `jupyter.json` - Jupyter notebooks (Python ecosystem)
-- `ml.json` - Machine learning projects (Python ecosystem)
-- `wasm.json` - WebAssembly projects (Rust ecosystem)
-- `ios.json` - iOS/macOS applications (Swift ecosystem)
-- `android.json` - Android applications (Kotlin ecosystem)
+**Universal Names:**
 
-**Historical Names** (being standardized):
+- `library.json` - For libraries/packages published to package registries (all ecosystems)
 
-- `node.json` → Should be `app.json` (JavaScript)
-- `binary.json` → Should be `app.json` (Rust)
+**JavaScript/TypeScript** (high runtime diversity):
+
+- `node.json` - Node.js runtime applications ✅ Specific and meaningful
+- `bun.json` - Bun runtime applications ✅ Specific and meaningful
+- `frontend.json` - Browser-based applications ✅ Environment-specific
+- `monorepo.json` - Monorepo workspace configuration
+- `cloudflare-workers.json` - Cloudflare Workers edge functions
+
+**Python** (single primary runtime, domain diversity):
+
+- `app.json` - Python applications ✅ Generic acceptable here
+- `jupyter.json` - Jupyter notebooks ✅ Environment-specific
+- `ml.json` - Machine learning projects ✅ Domain-specific
+
+**Rust** (ecosystem terminology):
+
+- `binary.json` - Binary crates ✅ Uses Rust's terminology (not generic "app")
+- `wasm.json` - WebAssembly target ✅ Target-specific
+
+**Go** (single runtime):
+
+- `app.json` - Go applications ✅ Generic acceptable
+
+**Swift** (platform diversity):
+
+- `app.json` - Generic Swift applications
+- `ios.json` - iOS/macOS applications ✅ Platform-specific
+
+**Kotlin/Java** (platform diversity):
+
+- `app.json` - Generic JVM applications
+- `android.json` - Android applications ✅ Platform-specific
+
+**Nix** (purpose diversity):
+
+- `flake.json` - Nix flake projects
+- `devshell.json` - Development shells
+- `nixos.json` - NixOS system configuration ✅ Purpose-specific
 
 #### Layer 4: Tooling Presets
 
@@ -282,39 +313,78 @@ examples/
 └── <language>-<type>.json
 ```
 
-## Standardization Roadmap
+## Naming Rationale
 
-### Current Inconsistencies
+### Core Philosophy: Specificity Over Uniformity
 
-1. **JavaScript uses `node.json`** instead of `app.json`
-   - Status: Historical naming
-   - Plan: Keep for compatibility, document as legacy
-   - Recommendation: New projects use `app.json` pattern
+The naming across ecosystems is **intentionally diverse** because different ecosystems have different needs. We prioritize **meaningful, informative names** over artificial consistency.
 
-2. **Rust uses `binary.json`** instead of `app.json`
-   - Status: Reflects Rust terminology (binary vs library crate)
-   - Plan: Keep for semantic accuracy
-   - Justification: "binary" is the correct Rust term
+### Why Different Patterns?
 
-### Naming Rationale
+#### JavaScript: `node.json` vs `app.json`
 
-#### Why `app.json` instead of `application.json`?
+**Why `node.json` is better:**
 
-- **Brevity**: Shorter is better for file names
-- **Consistency**: Matches `library.json` length pattern
-- **Common usage**: "app" is widely understood
+- JavaScript has multiple distinct runtimes (Node.js, Bun, Deno, browsers)
+- Each runtime has different APIs, constraints, and deployment models
+- "node" tells you specifically this is for Node.js server-side execution
+- "app" would be meaningless - app for what environment?
 
-#### Why `library.json` not `lib.json`?
+**Pattern:** Use runtime/environment names when there's diversity
+
+#### Rust: `binary.json` vs `app.json`
+
+**Why `binary.json` is correct:**
+
+- "Binary crate" is the actual Rust terminology
+- Rust developers think in terms of "library crates" vs "binary crates"
+- Using ecosystem terminology makes it immediately recognizable
+- "app" would feel foreign to Rust developers
+
+**Pattern:** Use ecosystem terminology when it's well-established
+
+#### Python/Go: `app.json` is acceptable
+
+**Why generic `app.json` works here:**
+
+- Python and Go have single primary runtimes
+- No meaningful runtime distinction to make
+- "Application" is clear enough in these contexts
+
+**Pattern:** Generic terms acceptable when there's no meaningful distinction
+
+### Naming Decision Tree
+
+When naming a project type preset, ask:
+
+1. **Are there multiple runtimes/environments?**
+   - YES → Use runtime names (node, bun, browser)
+   - NO → Continue to #2
+
+2. **Does the ecosystem have specific terminology?**
+   - YES → Use ecosystem terms (binary for Rust)
+   - NO → Continue to #3
+
+3. **Are there platform-specific variants?**
+   - YES → Use platform names (ios, android, nixos)
+   - NO → Continue to #4
+
+4. **Is it domain-specific?**
+   - YES → Use domain terms (ml, jupyter)
+   - NO → Generic `app.json` is acceptable
+
+### Why NOT `library.json` → `lib.json`?
 
 - **Clarity**: "library" is unambiguous
-- **Not too long**: Still reasonably short
-- **Standard term**: Used across all ecosystems
+- **Searchability**: Easier to find and search for
+- **Universal**: "library" is understood across all ecosystems
+- **Not too long**: Still reasonable length
 
-#### Why `cli.json` separate from `app.json`?
+### Why `frontend.json` not `browser.json`?
 
-- **Optional specialization**: CLI apps have specific needs (argument parsing, etc.)
-- **Can use `app.json`**: If no CLI-specific configuration needed
-- **Clear intent**: Explicitly marks CLI tools
+- **Developer mental model**: Developers think "frontend" not "browser"
+- **Encompasses more**: Includes SSR, build tools, not just browser runtime
+- **Common usage**: "Frontend" is the standard term in the industry
 
 ## Language-Specific Considerations
 
@@ -322,56 +392,72 @@ examples/
 
 **Ecosystem characteristics**:
 
-- Multiple package managers (npm, yarn, pnpm, Bun)
+- **Multiple runtimes**: Node.js, Bun, Deno, browsers
+- Each runtime has distinct APIs and deployment models
 - Strong monorepo culture
-- Frontend vs backend split
+- Complex frontend tooling ecosystem
 
-**Naming decisions**:
+**Naming decisions** (runtime-specific):
 
-- `node.json` historically used for Node.js apps
-- `frontend.json` for React/Vue/Svelte apps
-- `monorepo.json` for workspace projects
+- `node.json` - Node.js server-side applications ✅ Runtime-specific
+- `bun.json` - Bun runtime applications ✅ Runtime-specific
+- `frontend.json` - Browser-based applications ✅ Environment-specific
+- `monorepo.json` - Workspace projects ✅ Structure-specific
+- `cloudflare-workers.json` - Edge runtime ✅ Platform-specific
+
+**Why not `app.json`?** Too vague - doesn't indicate which runtime/environment
 
 ### Python
 
 **Ecosystem characteristics**:
 
+- **Single primary runtime** (CPython, with PyPy as edge case)
 - Multiple package managers (pip, poetry, pipenv, pdm, uv)
 - Strong ML/data science presence
 - Notebook-based workflows
 
 **Naming decisions**:
 
-- `jupyter.json` for notebook projects
-- `ml.json` for machine learning
-- Lowercase tool names following Python conventions
+- `app.json` - Python applications ✅ Generic acceptable (single runtime)
+- `jupyter.json` - Notebook projects ✅ Environment-specific
+- `ml.json` - Machine learning ✅ Domain-specific
+- Lowercase tool names following Python conventions (pytest, not PyTest)
+
+**Why `app.json` works here**: No runtime ambiguity unlike JavaScript
 
 ### Rust
 
 **Ecosystem characteristics**:
 
-- Library crates vs binary crates terminology
+- **Distinct terminology**: "library crates" vs "binary crates"
 - Strong type system focus
-- WASM compilation target
+- Multiple compilation targets (native, WASM)
 
-**Naming decisions**:
+**Naming decisions** (ecosystem terminology):
 
-- `binary.json` preserves Rust terminology
-- `wasm.json` for WebAssembly projects
-- Tool names follow crate names
+- `binary.json` - Binary crates ✅ Correct Rust term (not "app")
+- `library.json` - Library crates ✅ Correct Rust term
+- `wasm.json` - WebAssembly target ✅ Target-specific
+- Tool names follow crate names (tokio, serde, clap)
+
+**Why `binary.json` not `app.json`**: "Binary crate" is how Rust developers think about executables. Using Rust's terminology makes it immediately recognizable and correct.
 
 ### Go
 
 **Ecosystem characteristics**:
 
+- **Single runtime** (Go runtime)
 - Simple, opinionated tooling
 - Standard library focus
 - Minimal external frameworks
 
 **Naming decisions**:
 
-- Simple `app.json` and `library.json`
-- Framework-specific tooling presets
+- `app.json` - Go applications ✅ Generic acceptable (single runtime)
+- `library.json` - Go packages/modules ✅ Clear terminology
+- Framework-specific tooling presets (gin, echo, cobra, grpc)
+
+**Why `app.json` works here**: Go has a single runtime, no ambiguity about execution environment
 
 ### Swift
 
