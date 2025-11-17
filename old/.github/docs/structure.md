@@ -5,7 +5,6 @@
 ```
 config-renovate/
 ├── README.md                      # Main documentation
-├── MIGRATION.md                   # Guide for migrating from monolithic config
 ├── CONTRIBUTING.md                # Guide for adding new languages
 ├── STRUCTURE.md                   # This file - repository structure overview
 ├── CLAUDE.md                      # AI assistant instructions
@@ -73,6 +72,7 @@ config-renovate/
 ## Preset Categories
 
 ### 1. Base Presets (Root Level)
+
 These are universal and can be used with any language:
 
 - **base.json**: Foundation for all configs
@@ -81,6 +81,7 @@ These are universal and can be used with any language:
 - **schedule.json**: Update timing
 
 ### 2. Language Ecosystems
+
 Language-specific presets organized by ecosystem:
 
 - **javascript/**: Complete JS/TS ecosystem support
@@ -89,6 +90,7 @@ Language-specific presets organized by ecosystem:
 - **go/**: _(planned)_ Go ecosystem
 
 ### 3. Project Types
+
 Within each language, presets for different project types:
 
 - **base.json**: Common settings for the language
@@ -97,6 +99,7 @@ Within each language, presets for different project types:
 - **monorepo.json**: Monorepos
 
 ### 4. Tooling
+
 Optional tool-specific presets for granular control:
 
 - **tooling/typescript.json**: TypeScript grouping
@@ -105,6 +108,7 @@ Optional tool-specific presets for granular control:
 - etc.
 
 ### 5. CI/CD
+
 Platform-specific CI/CD configurations:
 
 - **ci/github-actions.json**: GitHub Actions
@@ -114,7 +118,9 @@ Platform-specific CI/CD configurations:
 ## Usage Patterns
 
 ### Minimal Setup
+
 Just the basics:
+
 ```json
 {
   "extends": ["github>gfmio/config-renovate"]
@@ -122,7 +128,9 @@ Just the basics:
 ```
 
 ### Typical Setup
+
 Base + language + project type:
+
 ```json
 {
   "extends": [
@@ -135,7 +143,9 @@ Base + language + project type:
 ```
 
 ### Comprehensive Setup
+
 Everything including tooling:
+
 ```json
 {
   "extends": [
@@ -154,10 +164,13 @@ Everything including tooling:
 ## Design Philosophy
 
 ### Composition Over Configuration
+
 Build your config by composing small, focused presets rather than maintaining a large monolithic configuration.
 
 ### Opt-in Complexity
+
 Start simple and add more presets as needed:
+
 1. Base preset
 2. Add security
 3. Add automerge
@@ -165,24 +178,29 @@ Start simple and add more presets as needed:
 5. Add tooling-specific rules
 
 ### Clear Separation of Concerns
+
 Each preset has a single, well-defined purpose:
+
 - **What** it configures (base settings, security, etc.)
 - **When** updates run (schedule)
 - **How** updates are handled (automerge)
 - **Which** packages are grouped (tooling)
 
 ### Easy to Extend
+
 Adding new languages or tools follows a consistent pattern documented in CONTRIBUTING.md.
 
 ## Supported Languages
 
 Currently supported ecosystems:
+
 - ✅ **JavaScript/TypeScript** - npm, yarn, pnpm, bun
 - ✅ **Python** - pip, poetry, pipenv, pdm, uv
 
 ## Future Additions
 
 Planned language ecosystems:
+
 - Rust (cargo)
 - Go (go modules)
 - Swift (SPM)
@@ -191,6 +209,7 @@ Planned language ecosystems:
 - PHP (composer)
 
 Planned CI/CD:
+
 - GitLab CI
 - Docker images
 - Terraform modules
@@ -198,6 +217,4 @@ Planned CI/CD:
 ## Related Files
 
 - **README.md**: User-facing documentation
-- **MIGRATION.md**: Migration guide from monolithic config
 - **CONTRIBUTING.md**: Guide for adding new presets
-- **renovate.current.json**: Original config (kept for reference)
