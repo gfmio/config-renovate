@@ -48,5 +48,5 @@
     "validate:renovate": "renovate-config-validator --strict default.json .github/renovate.json presets/**/*.json examples/*.json"
   },
   "type": "module",
-  "version": "0.0.0"
+  "version": "1.0.0"
 }
