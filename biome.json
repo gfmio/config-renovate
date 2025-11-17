@@ -3,6 +3,11 @@
   "extends": [
     "@gfmio/config-biome/biome.json"
   ],
+  "files": {
+    "includes": [
+      "**/*",
+      "!!presets/javascript/tooling/biome.json"
+    ]
+  },
   "root": true
 }
-
