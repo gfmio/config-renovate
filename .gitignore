@@ -228,3 +228,5 @@ renovate-debug.log
 tmp/
 temp/
 *.tmp
+
+.scratch
