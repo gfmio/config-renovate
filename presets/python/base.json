@@ -7,22 +7,30 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "Python",
       "description": "Group Python version updates",
-      "matchDatasources": ["python-version"],
       "groupName": "Python version",
-      "commitMessageTopic": "Python"
+      "matchDatasources": [
+        "python-version"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Python version updates",
-      "matchDatasources": ["python-version"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchDatasources": [
+        "python-version"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
+      "commitMessageTopic": "Python dev dependencies",
       "description": "Group dev dependencies for cleaner PRs",
-      "matchDepTypes": ["dev-dependencies"],
       "groupName": "Python dev dependencies",
-      "commitMessageTopic": "Python dev dependencies"
+      "matchDepTypes": [
+        "dev-dependencies"
+      ]
     }
   ]
 }

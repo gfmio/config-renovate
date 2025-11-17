@@ -3,17 +3,25 @@
   "description": "Home Manager configuration",
   "packageRules": [
     {
+      "commitMessageTopic": "Home Manager",
       "description": "Group Home Manager flake input",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["home-manager"],
       "groupName": "Home Manager",
-      "commitMessageTopic": "Home Manager"
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "home-manager"
+      ]
     },
     {
       "description": "Keep Home Manager in sync with nixpkgs version",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["home-manager"],
-      "followTag": "release-24.05"
+      "followTag": "release-24.05",
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "home-manager"
+      ]
     }
   ]
 }

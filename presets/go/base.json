@@ -7,23 +7,35 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "Go toolchain",
       "description": "Group Go toolchain updates",
-      "matchDatasources": ["golang-version"],
       "groupName": "Go toolchain",
-      "commitMessageTopic": "Go toolchain"
+      "matchDatasources": [
+        "golang-version"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Go version updates",
-      "matchDatasources": ["golang-version"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchDatasources": [
+        "golang-version"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
       "description": "Handle Go major version in import paths (v2, v3, etc.)",
-      "matchManagers": ["gomod"],
-      "matchUpdateTypes": ["major"],
-      "enabled": true
+      "enabled": true,
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
   ],
-  "postUpdateOptions": ["gomodTidy"]
+  "postUpdateOptions": [
+    "gomodTidy"
+  ]
 }

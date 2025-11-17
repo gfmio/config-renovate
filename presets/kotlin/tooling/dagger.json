@@ -3,21 +3,21 @@
   "description": "Dagger and Hilt dependency injection configuration",
   "packageRules": [
     {
+      "commitMessageTopic": "Dagger",
       "description": "Group Dagger dependencies",
+      "groupName": "Dagger",
       "matchPackagePatterns": [
         "^com\\.google\\.dagger:"
-      ],
-      "groupName": "Dagger",
-      "commitMessageTopic": "Dagger"
+      ]
     },
     {
+      "commitMessageTopic": "Hilt",
       "description": "Group Hilt dependencies",
+      "groupName": "Hilt",
       "matchPackagePatterns": [
         "^com\\.google\\.dagger:hilt-",
         "^androidx\\.hilt:"
-      ],
-      "groupName": "Hilt",
-      "commitMessageTopic": "Hilt"
+      ]
     }
   ]
 }

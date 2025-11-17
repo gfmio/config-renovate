@@ -3,10 +3,12 @@
   "description": "Kingfisher image loading library package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Kingfisher",
       "description": "Group Kingfisher packages",
       "groupName": "Kingfisher",
-      "commitMessageTopic": "Kingfisher",
-      "matchPackageNames": ["https://github.com/onevcat/Kingfisher"]
+      "matchPackageNames": [
+        "https://github.com/onevcat/Kingfisher"
+      ]
     }
   ]
 }

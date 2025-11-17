@@ -6,8 +6,10 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["/^org\\.springframework\\.cloud:/"],
-      "groupName": "Spring Cloud"
+      "groupName": "Spring Cloud",
+      "matchPackageNames": [
+        "/^org\\.springframework\\.cloud:/"
+      ]
     }
   ]
 }

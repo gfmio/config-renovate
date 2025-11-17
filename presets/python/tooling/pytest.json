@@ -3,9 +3,9 @@
   "description": "pytest testing framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "pytest",
       "description": "Group all pytest packages",
       "groupName": "pytest",
-      "commitMessageTopic": "pytest",
       "matchPackageNames": [
         "pytest",
         "/^pytest-/"

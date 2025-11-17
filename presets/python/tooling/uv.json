@@ -3,18 +3,22 @@
   "description": "uv package manager specific configuration",
   "packageRules": [
     {
+      "commitMessageTopic": "uv",
       "description": "Group uv packages",
       "groupName": "uv",
-      "commitMessageTopic": "uv",
       "matchPackageNames": [
         "uv"
       ]
     },
     {
+      "automerge": false,
       "description": "Separate major uv updates",
-      "matchPackageNames": ["uv"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchPackageNames": [
+        "uv"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
   ]
 }

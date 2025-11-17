@@ -3,10 +3,12 @@
   "description": "Biome toolchain package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Biome",
       "description": "Group all Biome packages",
       "groupName": "Biome",
-      "commitMessageTopic": "Biome",
-      "matchPackageNames": ["/^@biomejs\\//"]
+      "matchPackageNames": [
+        "/^@biomejs\\//"
+      ]
     }
   ]
 }

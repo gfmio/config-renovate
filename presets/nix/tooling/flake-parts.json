@@ -3,15 +3,17 @@
   "description": "flake-parts modular flake framework",
   "packageRules": [
     {
+      "commitMessageTopic": "flake-parts",
       "description": "Group flake-parts and related inputs",
-      "matchManagers": ["nix"],
+      "groupName": "flake-parts",
+      "matchManagers": [
+        "nix"
+      ],
       "matchPackageNames": [
         "flake-parts",
         "flake-root",
         "treefmt-nix"
-      ],
-      "groupName": "flake-parts",
-      "commitMessageTopic": "flake-parts"
+      ]
     }
   ]
 }

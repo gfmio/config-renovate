@@ -3,9 +3,9 @@
   "description": "gRPC and Protocol Buffers package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "gRPC/Protobuf",
       "description": "Group gRPC and protobuf packages",
       "groupName": "gRPC/Protobuf",
-      "commitMessageTopic": "gRPC/Protobuf",
       "matchPackageNames": [
         "google.golang.org/grpc",
         "google.golang.org/protobuf",

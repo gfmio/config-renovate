@@ -1,14 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessagePrefix": "chore(deps):",
   "description": "Configuration for Jupyter notebook projects",
   "extends": [
     ":semanticCommits",
     ":combinePatchMinorReleases"
   ],
-  "commitMessagePrefix": "chore(deps):",
   "packageRules": [
     {
+      "commitMessageTopic": "Jupyter",
       "description": "Group Jupyter-related packages",
+      "groupName": "Jupyter",
       "matchPackageNames": [
         "jupyter",
         "jupyterlab",
@@ -18,20 +20,18 @@
         "ipywidgets",
         "/^jupyter-/",
         "/^jupyterlab-/"
-      ],
-      "groupName": "Jupyter",
-      "commitMessageTopic": "Jupyter"
+      ]
     },
     {
+      "commitMessageTopic": "Jupyter notebook tools",
       "description": "Group data science notebook extensions",
+      "groupName": "Jupyter notebook tools",
       "matchPackageNames": [
         "nbconvert",
         "nbformat",
         "nbclient",
         "nbdime"
-      ],
-      "groupName": "Jupyter notebook tools",
-      "commitMessageTopic": "Jupyter notebook tools"
+      ]
     }
   ]
 }

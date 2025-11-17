@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessageAction": "update",
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageTopic": "{{depName}}",
   "description": "Configuration for Rust binary crates (CLIs, applications, services)",
   "extends": [
     ":semanticCommits",
@@ -7,22 +10,25 @@
     ":combinePatchMinorReleases",
     ":ignoreUnstable"
   ],
-  "commitMessagePrefix": "chore(deps):",
-  "commitMessageAction": "update",
-  "commitMessageTopic": "{{depName}}",
   "packageRules": [
     {
       "description": "Pin dependencies for binaries (reproducibility)",
-      "matchManagers": ["cargo"],
+      "matchManagers": [
+        "cargo"
+      ],
       "rangeStrategy": "pin"
     },
     {
       "description": "Update Cargo.lock regularly",
-      "matchManagers": ["cargo"],
       "lockFileMaintenance": {
         "enabled": true,
-        "schedule": ["before 6am on the first day of the month"]
-      }
+        "schedule": [
+          "before 6am on the first day of the month"
+        ]
+      },
+      "matchManagers": [
+        "cargo"
+      ]
     }
   ]
 }

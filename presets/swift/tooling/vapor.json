@@ -3,9 +3,9 @@
   "description": "Vapor web framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Vapor",
       "description": "Group Vapor packages",
       "groupName": "Vapor",
-      "commitMessageTopic": "Vapor",
       "matchPackageNames": [
         "https://github.com/vapor/vapor",
         "https://github.com/vapor/fluent",

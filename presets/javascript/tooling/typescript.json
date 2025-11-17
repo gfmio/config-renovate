@@ -3,18 +3,25 @@
   "description": "TypeScript package grouping and version management",
   "packageRules": [
     {
+      "commitMessageTopic": "TypeScript",
       "description": "Group all TypeScript packages",
       "groupName": "TypeScript",
-      "commitMessageTopic": "TypeScript",
-      "matchPackageNames": ["typescript", "/^@types\\//"]
+      "matchPackageNames": [
+        "typescript",
+        "/^@types\\//"
+      ]
     },
     {
-      "description": "Separate major TypeScript updates for breaking changes",
-      "matchPackageNames": ["typescript"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "TypeScript (major)",
+      "automerge": false,
       "commitMessageTopic": "TypeScript (major)",
-      "automerge": false
+      "description": "Separate major TypeScript updates for breaking changes",
+      "groupName": "TypeScript (major)",
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
   ]
 }

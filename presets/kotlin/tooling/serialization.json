@@ -3,29 +3,29 @@
   "description": "Kotlin Serialization and common serialization libraries",
   "packageRules": [
     {
+      "commitMessageTopic": "Kotlin Serialization",
       "description": "Group Kotlin Serialization dependencies",
+      "groupName": "Kotlin Serialization",
       "matchPackagePatterns": [
         "^org\\.jetbrains\\.kotlinx:kotlinx-serialization-",
         "^org\\.jetbrains\\.kotlin\\.plugin\\.serialization"
-      ],
-      "groupName": "Kotlin Serialization",
-      "commitMessageTopic": "Kotlin Serialization"
+      ]
     },
     {
+      "commitMessageTopic": "Jackson",
       "description": "Group Jackson dependencies",
+      "groupName": "Jackson",
       "matchPackagePatterns": [
         "^com\\.fasterxml\\.jackson\\."
-      ],
-      "groupName": "Jackson",
-      "commitMessageTopic": "Jackson"
+      ]
     },
     {
+      "commitMessageTopic": "Gson",
       "description": "Group Gson dependencies",
+      "groupName": "Gson",
       "matchPackageNames": [
         "com.google.code.gson:gson"
-      ],
-      "groupName": "Gson",
-      "commitMessageTopic": "Gson"
+      ]
     }
   ]
 }

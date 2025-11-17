@@ -3,9 +3,9 @@
   "description": "mypy type checker package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "mypy",
       "description": "Group mypy and type stub packages",
       "groupName": "mypy",
-      "commitMessageTopic": "mypy",
       "matchPackageNames": [
         "mypy",
         "/^types-/"

@@ -1,38 +1,40 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessagePrefix": "chore(deps):",
   "description": "Configuration for ML/AI/LLM projects (PyTorch, TensorFlow, Transformers, etc.)",
   "extends": [
     ":semanticCommits",
     ":separateMajorReleases"
   ],
-  "commitMessagePrefix": "chore(deps):",
   "packageRules": [
     {
+      "commitMessageTopic": "PyTorch",
       "description": "Group PyTorch packages",
+      "groupName": "PyTorch",
       "matchPackageNames": [
         "torch",
         "torchvision",
         "torchaudio",
         "torchtext",
         "/^torch/"
-      ],
-      "groupName": "PyTorch",
-      "commitMessageTopic": "PyTorch"
+      ]
     },
     {
+      "commitMessageTopic": "TensorFlow",
       "description": "Group TensorFlow packages",
+      "groupName": "TensorFlow",
       "matchPackageNames": [
         "tensorflow",
         "tensorflow-gpu",
         "tensorflow-datasets",
         "tensorflow-hub",
         "/^tensorflow-/"
-      ],
-      "groupName": "TensorFlow",
-      "commitMessageTopic": "TensorFlow"
+      ]
     },
     {
+      "commitMessageTopic": "Hugging Face",
       "description": "Group Hugging Face packages",
+      "groupName": "Hugging Face",
       "matchPackageNames": [
         "transformers",
         "datasets",
@@ -41,22 +43,22 @@
         "diffusers",
         "peft",
         "evaluate"
-      ],
-      "groupName": "Hugging Face",
-      "commitMessageTopic": "Hugging Face"
+      ]
     },
     {
+      "commitMessageTopic": "LangChain",
       "description": "Group LangChain packages",
+      "groupName": "LangChain",
       "matchPackageNames": [
         "/^langchain/",
         "/^langsmith/",
         "langgraph"
-      ],
-      "groupName": "LangChain",
-      "commitMessageTopic": "LangChain"
+      ]
     },
     {
+      "commitMessageTopic": "ML/Data Science libraries",
       "description": "Group common ML libraries",
+      "groupName": "ML/Data Science libraries",
       "matchPackageNames": [
         "numpy",
         "pandas",
@@ -64,11 +66,11 @@
         "scipy",
         "matplotlib",
         "seaborn"
-      ],
-      "groupName": "ML/Data Science libraries",
-      "commitMessageTopic": "ML/Data Science libraries"
+      ]
     },
     {
+      "automerge": false,
+      "dependencyDashboardApproval": true,
       "description": "Careful with major ML framework updates (often breaking)",
       "matchPackageNames": [
         "torch",
@@ -76,9 +78,9 @@
         "transformers",
         "/^langchain/"
       ],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "dependencyDashboardApproval": true
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
       "description": "Add stability days for ML packages (often have early bugs)",

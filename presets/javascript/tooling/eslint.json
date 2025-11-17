@@ -3,10 +3,13 @@
   "description": "ESLint package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "ESLint",
       "description": "Group all ESLint packages",
       "groupName": "ESLint",
-      "commitMessageTopic": "ESLint",
-      "matchPackageNames": ["/^eslint/", "/^@eslint\\//"]
+      "matchPackageNames": [
+        "/^eslint/",
+        "/^@eslint\\//"
+      ]
     }
   ]
 }

@@ -3,12 +3,12 @@
   "description": "Android Room database configuration",
   "packageRules": [
     {
+      "commitMessageTopic": "Room",
       "description": "Group Room dependencies",
+      "groupName": "Room",
       "matchPackagePatterns": [
         "^androidx\\.room:"
-      ],
-      "groupName": "Room",
-      "commitMessageTopic": "Room"
+      ]
     }
   ]
 }

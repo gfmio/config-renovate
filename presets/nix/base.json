@@ -5,35 +5,51 @@
     "group:recommended",
     "workarounds:all"
   ],
+  "nix": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "description": "Enable Nix manager",
-      "matchManagers": ["nix"],
-      "enabled": true
+      "enabled": true,
+      "matchManagers": [
+        "nix"
+      ]
     },
     {
+      "commitMessageTopic": "nixpkgs",
       "description": "Group nixpkgs input updates",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["nixpkgs"],
       "groupName": "nixpkgs",
-      "commitMessageTopic": "nixpkgs"
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "nixpkgs"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major nixpkgs updates (e.g., different NixOS releases)",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["nixpkgs"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "nixpkgs"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
+      "commitMessageTopic": "Nix flake inputs",
       "description": "Group flake inputs by source",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["!nixpkgs"],
       "groupName": "Nix flake inputs",
-      "commitMessageTopic": "Nix flake inputs"
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "!nixpkgs"
+      ]
     }
-  ],
-  "nix": {
-    "enabled": true
-  }
+  ]
 }

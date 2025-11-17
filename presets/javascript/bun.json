@@ -3,20 +3,28 @@
   "description": "Bun runtime-specific configuration with careful major version handling",
   "packageRules": [
     {
-      "description": "Separate major Bun updates for careful review",
-      "matchPackageNames": ["bun"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "Bun (major)",
+      "automerge": false,
       "commitMessageTopic": "Bun (major)",
-      "automerge": false
+      "description": "Separate major Bun updates for careful review",
+      "groupName": "Bun (major)",
+      "matchPackageNames": [
+        "bun"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
-      "description": "Automerge Bun patch updates",
-      "matchPackageNames": ["bun"],
-      "matchUpdateTypes": ["patch"],
       "automerge": true,
+      "automergeStrategy": "squash",
       "automergeType": "pr",
-      "automergeStrategy": "squash"
+      "description": "Automerge Bun patch updates",
+      "matchPackageNames": [
+        "bun"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
     }
   ]
 }

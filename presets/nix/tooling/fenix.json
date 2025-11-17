@@ -3,11 +3,15 @@
   "description": "fenix Rust toolchain for Nix",
   "packageRules": [
     {
+      "commitMessageTopic": "fenix Rust toolchain",
       "description": "Group fenix flake input",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["fenix"],
       "groupName": "fenix",
-      "commitMessageTopic": "fenix Rust toolchain"
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "fenix"
+      ]
     }
   ]
 }

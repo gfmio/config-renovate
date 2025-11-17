@@ -7,15 +7,21 @@
   "packageRules": [
     {
       "description": "Pin dependencies for reproducible builds in applications",
-      "matchManagers": ["gradle", "maven"],
+      "matchManagers": [
+        "gradle",
+        "maven"
+      ],
       "rangeStrategy": "pin"
     },
     {
       "description": "Enable lock file maintenance",
-      "matchManagers": ["gradle", "maven"],
       "lockFileMaintenance": {
         "enabled": true
-      }
+      },
+      "matchManagers": [
+        "gradle",
+        "maven"
+      ]
     }
   ]
 }

@@ -1,21 +1,28 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Automerge strategy: automerge minor/patch, require approval for major",
-  "extends": [":automergeDisabled"],
+  "extends": [
+    ":automergeDisabled"
+  ],
   "packageRules": [
     {
-      "description": "Automerge non-major updates",
-      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "automergeType": "pr",
       "automergeStrategy": "squash",
+      "automergeType": "pr",
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "platformAutomerge": true
     },
     {
-      "description": "Require approval for major updates",
-      "matchUpdateTypes": ["major"],
+      "automerge": false,
       "dependencyDashboardApproval": true,
-      "automerge": false
+      "description": "Require approval for major updates",
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
   ]
 }

@@ -1,15 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "configMigration": true,
+  "dependencyDashboard": true,
+  "dependencyDashboardHeader": "This dashboard shows all pending dependency updates. Click on a checkbox to create a PR for that update now.",
+  "dependencyDashboardLabels": [
+    "dependencies",
+    "renovate"
+  ],
+  "dependencyDashboardTitle": "🤖 Dependency Updates",
   "description": "Base Renovate configuration with minimal shared settings",
   "extends": [
     "config:recommended"
   ],
-  "timezone": "UTC",
-  "labels": ["dependencies"],
-  "dependencyDashboard": true,
-  "dependencyDashboardTitle": "🤖 Dependency Updates",
-  "dependencyDashboardHeader": "This dashboard shows all pending dependency updates. Click on a checkbox to create a PR for that update now.",
-  "dependencyDashboardLabels": ["dependencies", "renovate"],
-  "configMigration": true,
-  "rebaseWhen": "behind-base-branch"
+  "labels": [
+    "dependencies"
+  ],
+  "rebaseWhen": "behind-base-branch",
+  "timezone": "UTC"
 }

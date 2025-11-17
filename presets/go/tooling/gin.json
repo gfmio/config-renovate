@@ -3,10 +3,12 @@
   "description": "Gin web framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Gin",
       "description": "Group Gin packages",
       "groupName": "Gin",
-      "commitMessageTopic": "Gin",
-      "matchPackageNames": ["github.com/gin-gonic/gin"]
+      "matchPackageNames": [
+        "github.com/gin-gonic/gin"
+      ]
     }
   ]
 }

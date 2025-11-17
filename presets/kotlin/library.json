@@ -7,15 +7,23 @@
   "packageRules": [
     {
       "description": "Use version ranges for libraries to maximize compatibility",
-      "matchManagers": ["gradle", "gradle-wrapper", "maven"],
+      "matchManagers": [
+        "gradle",
+        "gradle-wrapper",
+        "maven"
+      ],
       "rangeStrategy": "bump"
     },
     {
       "description": "Enable semantic commits for library versioning",
-      "matchManagers": ["gradle", "gradle-wrapper", "maven"],
+      "matchManagers": [
+        "gradle",
+        "gradle-wrapper",
+        "maven"
+      ],
+      "semanticCommitScope": "deps",
       "semanticCommits": "enabled",
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "deps"
+      "semanticCommitType": "chore"
     }
   ]
 }

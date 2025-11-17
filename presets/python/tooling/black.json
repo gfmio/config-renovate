@@ -3,9 +3,9 @@
   "description": "Black code formatter package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Black",
       "description": "Group Black and related packages",
       "groupName": "Black",
-      "commitMessageTopic": "Black",
       "matchPackageNames": [
         "black",
         "blacken-docs"

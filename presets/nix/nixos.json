@@ -6,20 +6,28 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "NixOS",
       "description": "Group NixOS-related inputs",
-      "matchManagers": ["nix"],
+      "groupName": "NixOS",
+      "matchManagers": [
+        "nix"
+      ],
       "matchPackageNames": [
         "nixpkgs",
         "nixos-hardware"
-      ],
-      "groupName": "NixOS",
-      "commitMessageTopic": "NixOS"
+      ]
     },
     {
       "description": "Add stability days for NixOS major updates",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["nixpkgs"],
-      "matchUpdateTypes": ["major"],
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "nixpkgs"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "minimumReleaseAge": "7 days"
     }
   ]

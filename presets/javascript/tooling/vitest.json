@@ -3,10 +3,13 @@
   "description": "Vitest package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Vitest",
       "description": "Group all Vitest packages",
       "groupName": "Vitest",
-      "commitMessageTopic": "Vitest",
-      "matchPackageNames": ["/^vitest/", "/^@vitest\\//"]
+      "matchPackageNames": [
+        "/^vitest/",
+        "/^@vitest\\//"
+      ]
     }
   ]
 }

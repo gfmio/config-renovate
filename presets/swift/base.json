@@ -7,22 +7,34 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "Swift toolchain",
       "description": "Group Swift toolchain updates",
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["swift"],
       "groupName": "Swift toolchain",
-      "commitMessageTopic": "Swift toolchain"
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "swift"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Swift version updates",
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["swift"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "swift"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
       "description": "Handle Swift Package Manager dependencies",
-      "matchManagers": ["swift"],
+      "matchManagers": [
+        "swift"
+      ],
       "rangeStrategy": "bump"
     }
   ]

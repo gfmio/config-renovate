@@ -6,15 +6,17 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "Nix devShell utilities",
       "description": "Group devShell-related flake inputs",
-      "matchManagers": ["nix"],
+      "groupName": "Nix devShell utilities",
+      "matchManagers": [
+        "nix"
+      ],
       "matchPackageNames": [
         "devshell",
         "flake-utils",
         "flake-compat"
-      ],
-      "groupName": "Nix devShell utilities",
-      "commitMessageTopic": "Nix devShell utilities"
+      ]
     }
   ]
 }

@@ -3,9 +3,9 @@
   "description": "Ruff linter and formatter package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Ruff",
       "description": "Group Ruff packages",
       "groupName": "Ruff",
-      "commitMessageTopic": "Ruff",
       "matchPackageNames": [
         "ruff",
         "ruff-lsp"

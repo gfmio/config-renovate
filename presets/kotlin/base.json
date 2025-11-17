@@ -7,44 +7,54 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "Gradle wrapper",
       "description": "Group Gradle wrapper updates",
-      "matchDatasources": ["gradle-wrapper"],
       "groupName": "Gradle wrapper",
-      "commitMessageTopic": "Gradle wrapper"
+      "matchDatasources": [
+        "gradle-wrapper"
+      ]
     },
     {
+      "commitMessageTopic": "Kotlin",
       "description": "Group Kotlin version updates",
+      "groupName": "Kotlin",
       "matchPackageNames": [
         "org.jetbrains.kotlin:kotlin-gradle-plugin",
         "org.jetbrains.kotlin.jvm",
         "org.jetbrains.kotlin.android",
         "org.jetbrains.kotlin.multiplatform",
         "/^org\\.jetbrains\\.kotlin:kotlin-/"
-      ],
-      "groupName": "Kotlin",
-      "commitMessageTopic": "Kotlin"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Kotlin version updates",
       "matchPackageNames": [
         "org.jetbrains.kotlin:kotlin-gradle-plugin",
         "org.jetbrains.kotlin.jvm",
         "org.jetbrains.kotlin.android"
       ],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
+      "commitMessageTopic": "Java/JDK",
       "description": "Group Java/JDK version updates",
-      "matchDatasources": ["java-version"],
       "groupName": "Java/JDK",
-      "commitMessageTopic": "Java/JDK"
+      "matchDatasources": [
+        "java-version"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Java version updates",
-      "matchDatasources": ["java-version"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchDatasources": [
+        "java-version"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
   ]
 }

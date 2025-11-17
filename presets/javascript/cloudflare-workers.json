@@ -3,20 +3,24 @@
   "description": "Cloudflare Workers specific configuration",
   "packageRules": [
     {
+      "commitMessageTopic": "Cloudflare Workers",
       "description": "Group Cloudflare Workers packages",
+      "groupName": "Cloudflare Workers",
       "matchPackageNames": [
         "/^@cloudflare\\//",
         "wrangler",
         "miniflare"
-      ],
-      "groupName": "Cloudflare Workers",
-      "commitMessageTopic": "Cloudflare Workers"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Wrangler updates",
-      "matchPackageNames": ["wrangler"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchPackageNames": [
+        "wrangler"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
   ]
 }

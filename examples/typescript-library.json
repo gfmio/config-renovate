@@ -4,5 +4,7 @@
   "extends": [
     "@gfmio/config-renovate:presets/full/typescript-library"
   ],
-  "schedule": ["every weekend"]
+  "schedule": [
+    "every weekend"
+  ]
 }

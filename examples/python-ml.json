@@ -6,7 +6,10 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["torch", "tensorflow"],
+      "matchPackageNames": [
+        "torch",
+        "tensorflow"
+      ],
       "minimumReleaseAge": "7 days"
     }
   ]

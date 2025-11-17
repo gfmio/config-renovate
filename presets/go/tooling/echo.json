@@ -3,10 +3,13 @@
   "description": "Echo web framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Echo",
       "description": "Group Echo packages",
       "groupName": "Echo",
-      "commitMessageTopic": "Echo",
-      "matchPackageNames": ["github.com/labstack/echo/v4", "github.com/labstack/echo"]
+      "matchPackageNames": [
+        "github.com/labstack/echo/v4",
+        "github.com/labstack/echo"
+      ]
     }
   ]
 }

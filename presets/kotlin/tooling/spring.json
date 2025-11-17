@@ -3,41 +3,41 @@
   "description": "Spring Framework and Spring Boot configuration",
   "packageRules": [
     {
+      "commitMessageTopic": "Spring Boot",
       "description": "Group Spring Boot dependencies",
+      "groupName": "Spring Boot",
       "matchPackagePatterns": [
         "^org\\.springframework\\.boot:",
         "^org\\.springframework\\.boot\\."
-      ],
-      "groupName": "Spring Boot",
-      "commitMessageTopic": "Spring Boot"
+      ]
     },
     {
+      "commitMessageTopic": "Spring Framework",
       "description": "Group Spring Framework dependencies",
-      "matchPackagePatterns": [
-        "^org\\.springframework:",
-        "^org\\.springframework\\."
-      ],
       "excludePackagePatterns": [
         "^org\\.springframework\\.boot:"
       ],
       "groupName": "Spring Framework",
-      "commitMessageTopic": "Spring Framework"
+      "matchPackagePatterns": [
+        "^org\\.springframework:",
+        "^org\\.springframework\\."
+      ]
     },
     {
+      "commitMessageTopic": "Spring Security",
       "description": "Group Spring Security dependencies",
+      "groupName": "Spring Security",
       "matchPackagePatterns": [
         "^org\\.springframework\\.security:"
-      ],
-      "groupName": "Spring Security",
-      "commitMessageTopic": "Spring Security"
+      ]
     },
     {
+      "commitMessageTopic": "Spring Data",
       "description": "Group Spring Data dependencies",
+      "groupName": "Spring Data",
       "matchPackagePatterns": [
         "^org\\.springframework\\.data:"
-      ],
-      "groupName": "Spring Data",
-      "commitMessageTopic": "Spring Data"
+      ]
     }
   ]
 }

@@ -6,9 +6,12 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["pydantic", "pydantic-core"],
+      "commitMessageTopic": "Pydantic",
       "groupName": "Pydantic",
-      "commitMessageTopic": "Pydantic"
+      "matchPackageNames": [
+        "pydantic",
+        "pydantic-core"
+      ]
     }
   ]
 }

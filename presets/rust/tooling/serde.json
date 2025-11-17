@@ -3,9 +3,9 @@
   "description": "Serde serialization framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Serde",
       "description": "Group all Serde packages",
       "groupName": "Serde",
-      "commitMessageTopic": "Serde",
       "matchPackageNames": [
         "serde",
         "serde_json",

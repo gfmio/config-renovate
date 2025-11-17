@@ -6,9 +6,15 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["nixpkgs"],
-      "matchUpdateTypes": ["major"],
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "nixpkgs"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "minimumReleaseAge": "14 days"
     }
   ]

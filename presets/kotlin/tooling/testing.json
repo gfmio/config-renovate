@@ -3,45 +3,45 @@
   "description": "Kotlin and Java testing frameworks",
   "packageRules": [
     {
+      "commitMessageTopic": "JUnit",
       "description": "Group JUnit dependencies",
+      "groupName": "JUnit",
       "matchPackagePatterns": [
         "^org\\.junit\\.jupiter:",
         "^org\\.junit\\.platform:"
-      ],
-      "groupName": "JUnit",
-      "commitMessageTopic": "JUnit"
+      ]
     },
     {
+      "commitMessageTopic": "Kotest",
       "description": "Group Kotest dependencies",
+      "groupName": "Kotest",
       "matchPackagePatterns": [
         "^io\\.kotest:"
-      ],
-      "groupName": "Kotest",
-      "commitMessageTopic": "Kotest"
+      ]
     },
     {
+      "commitMessageTopic": "MockK",
       "description": "Group MockK dependencies",
+      "groupName": "MockK",
       "matchPackagePatterns": [
         "^io\\.mockk:"
-      ],
-      "groupName": "MockK",
-      "commitMessageTopic": "MockK"
+      ]
     },
     {
+      "commitMessageTopic": "Mockito",
       "description": "Group Mockito dependencies",
+      "groupName": "Mockito",
       "matchPackagePatterns": [
         "^org\\.mockito:"
-      ],
-      "groupName": "Mockito",
-      "commitMessageTopic": "Mockito"
+      ]
     },
     {
+      "commitMessageTopic": "AssertJ",
       "description": "Group AssertJ dependencies",
+      "groupName": "AssertJ",
       "matchPackagePatterns": [
         "^org\\.assertj:"
-      ],
-      "groupName": "AssertJ",
-      "commitMessageTopic": "AssertJ"
+      ]
     }
   ]
 }

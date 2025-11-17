@@ -3,13 +3,15 @@
   "description": "GitHub Actions configuration with automerge",
   "packageRules": [
     {
-      "description": "Group GitHub Actions updates and automerge",
-      "matchManagers": ["github-actions"],
-      "groupName": "GitHub Actions",
-      "commitMessageTopic": "GitHub Actions",
       "automerge": true,
+      "automergeStrategy": "squash",
       "automergeType": "pr",
-      "automergeStrategy": "squash"
+      "commitMessageTopic": "GitHub Actions",
+      "description": "Group GitHub Actions updates and automerge",
+      "groupName": "GitHub Actions",
+      "matchManagers": [
+        "github-actions"
+      ]
     }
   ]
 }

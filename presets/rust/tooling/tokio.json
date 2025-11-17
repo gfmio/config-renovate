@@ -3,10 +3,12 @@
   "description": "Tokio async runtime package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Tokio",
       "description": "Group all Tokio packages",
       "groupName": "Tokio",
-      "commitMessageTopic": "Tokio",
-      "matchPackageNames": ["/^tokio/"]
+      "matchPackageNames": [
+        "/^tokio/"
+      ]
     }
   ]
 }

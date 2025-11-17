@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "cargo": {
+    "rangeStrategy": "bump"
+  },
   "description": "Base Rust configuration for Cargo projects",
   "extends": [
     "group:recommended",
@@ -7,21 +10,28 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "Rust toolchain",
       "description": "Group Rust toolchain updates",
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["rust"],
       "groupName": "Rust toolchain",
-      "commitMessageTopic": "Rust toolchain"
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "rust"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Rust version updates",
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["rust"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "rust"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     }
-  ],
-  "cargo": {
-    "rangeStrategy": "bump"
-  }
+  ]
 }

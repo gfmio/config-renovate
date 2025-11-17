@@ -3,10 +3,12 @@
   "description": "Testify testing framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Testify",
       "description": "Group Testify packages",
       "groupName": "Testify",
-      "commitMessageTopic": "Testify",
-      "matchPackageNames": ["github.com/stretchr/testify"]
+      "matchPackageNames": [
+        "github.com/stretchr/testify"
+      ]
     }
   ]
 }

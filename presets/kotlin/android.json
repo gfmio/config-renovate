@@ -6,33 +6,35 @@
   ],
   "packageRules": [
     {
+      "commitMessageTopic": "Android Gradle Plugin",
       "description": "Group Android Gradle Plugin updates",
+      "groupName": "Android Gradle Plugin",
       "matchPackageNames": [
         "com.android.tools.build:gradle",
         "com.android.application",
         "com.android.library"
-      ],
-      "groupName": "Android Gradle Plugin",
-      "commitMessageTopic": "Android Gradle Plugin"
+      ]
     },
     {
+      "automerge": false,
       "description": "Separate major Android Gradle Plugin updates",
       "matchPackageNames": [
         "com.android.tools.build:gradle",
         "com.android.application",
         "com.android.library"
       ],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
+      "commitMessageTopic": "AndroidX",
       "description": "Group AndroidX libraries",
+      "groupName": "AndroidX",
       "matchPackageNames": [
         "/^androidx\\./",
         "/^com\\.google\\.android\\.material/"
-      ],
-      "groupName": "AndroidX",
-      "commitMessageTopic": "AndroidX"
+      ]
     },
     {
       "description": "Add stability days for major AndroidX updates",
@@ -40,17 +42,19 @@
         "/^androidx\\./",
         "/^com\\.google\\.android\\.material/"
       ],
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "minimumReleaseAge": "3 days"
     },
     {
+      "commitMessageTopic": "Compose",
       "description": "Group Compose libraries",
+      "groupName": "Compose",
       "matchPackageNames": [
         "/^androidx\\.compose\\./",
         "/^org\\.jetbrains\\.compose\\./"
-      ],
-      "groupName": "Compose",
-      "commitMessageTopic": "Compose"
+      ]
     },
     {
       "description": "Add stability days for Compose (can have early bugs)",

@@ -3,9 +3,9 @@
   "description": "Tracing instrumentation framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Tracing",
       "description": "Group all Tracing packages",
       "groupName": "Tracing",
-      "commitMessageTopic": "Tracing",
       "matchPackageNames": [
         "tracing",
         "tracing-subscriber",

@@ -6,7 +6,10 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["axum", "tokio"],
+      "matchPackageNames": [
+        "axum",
+        "tokio"
+      ],
       "minimumReleaseAge": "3 days"
     }
   ]

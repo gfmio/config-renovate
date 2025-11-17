@@ -7,17 +7,23 @@
   "packageRules": [
     {
       "description": "Enable lock file maintenance for flake.lock",
-      "matchManagers": ["nix"],
       "lockFileMaintenance": {
         "enabled": true
-      }
+      },
+      "matchManagers": [
+        "nix"
+      ]
     },
     {
+      "commitMessageTopic": "Nix flake.lock",
       "description": "Group all flake.lock updates together",
-      "matchManagers": ["nix"],
-      "matchFileNames": ["flake.lock"],
       "groupName": "Nix flake.lock",
-      "commitMessageTopic": "Nix flake.lock"
+      "matchFileNames": [
+        "flake.lock"
+      ],
+      "matchManagers": [
+        "nix"
+      ]
     }
   ]
 }

@@ -7,10 +7,11 @@
     "group:recommended",
     "workarounds:all"
   ],
-  "rangeStrategy": "bump",
   "packageRules": [
     {
+      "commitMessageTopic": "linting tools",
       "description": "Group all linting tools",
+      "groupName": "Linting tools",
       "matchPackageNames": [
         "markdownlint-cli2",
         "yamllint",
@@ -18,15 +19,17 @@
         "commitlint",
         "@commitlint/cli",
         "@commitlint/config-conventional"
-      ],
-      "groupName": "Linting tools",
-      "commitMessageTopic": "linting tools"
+      ]
     },
     {
+      "commitMessageTopic": "documentation tools",
       "description": "Group all documentation tools",
-      "matchPackageNames": ["typedoc", "@types/node"],
       "groupName": "Documentation tools",
-      "commitMessageTopic": "documentation tools"
+      "matchPackageNames": [
+        "typedoc",
+        "@types/node"
+      ]
     }
-  ]
+  ],
+  "rangeStrategy": "bump"
 }

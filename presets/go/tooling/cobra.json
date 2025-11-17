@@ -3,9 +3,9 @@
   "description": "Cobra CLI framework package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Cobra/Viper",
       "description": "Group Cobra and Viper packages",
       "groupName": "Cobra/Viper",
-      "commitMessageTopic": "Cobra/Viper",
       "matchPackageNames": [
         "github.com/spf13/cobra",
         "github.com/spf13/viper",

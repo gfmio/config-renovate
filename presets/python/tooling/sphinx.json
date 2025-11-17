@@ -3,9 +3,9 @@
   "description": "Sphinx documentation generator package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "Sphinx",
       "description": "Group Sphinx and extensions",
       "groupName": "Sphinx",
-      "commitMessageTopic": "Sphinx",
       "matchPackageNames": [
         "sphinx",
         "/^sphinx-/",

@@ -3,13 +3,13 @@
   "description": "Ktor framework configuration for Kotlin web services",
   "packageRules": [
     {
+      "commitMessageTopic": "Ktor",
       "description": "Group Ktor dependencies",
+      "groupName": "Ktor",
       "matchPackagePatterns": [
         "^io\\.ktor:",
         "^io\\.ktor\\."
-      ],
-      "groupName": "Ktor",
-      "commitMessageTopic": "Ktor"
+      ]
     }
   ]
 }

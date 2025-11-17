@@ -8,12 +8,19 @@
   "packageRules": [
     {
       "description": "Group workspace protocol dependencies",
-      "matchDepTypes": ["workspace"],
-      "enabled": false
+      "enabled": false,
+      "matchDepTypes": [
+        "workspace"
+      ]
     },
     {
       "description": "Higher PR limits for monorepos with many dependencies",
-      "matchManagers": ["npm", "yarn", "pnpm", "bun"],
+      "matchManagers": [
+        "npm",
+        "yarn",
+        "pnpm",
+        "bun"
+      ],
       "prConcurrentLimit": 20,
       "prHourlyLimit": 4
     }

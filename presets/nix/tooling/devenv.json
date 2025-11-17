@@ -3,11 +3,15 @@
   "description": "devenv.sh development environment framework",
   "packageRules": [
     {
+      "commitMessageTopic": "devenv",
       "description": "Group devenv flake input",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["devenv"],
       "groupName": "devenv",
-      "commitMessageTopic": "devenv"
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "devenv"
+      ]
     }
   ]
 }

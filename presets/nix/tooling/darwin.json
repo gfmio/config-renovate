@@ -3,11 +3,16 @@
   "description": "nix-darwin configuration for macOS",
   "packageRules": [
     {
+      "commitMessageTopic": "nix-darwin",
       "description": "Group nix-darwin flake input",
-      "matchManagers": ["nix"],
-      "matchPackageNames": ["nix-darwin", "darwin"],
       "groupName": "nix-darwin",
-      "commitMessageTopic": "nix-darwin"
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "nix-darwin",
+        "darwin"
+      ]
     }
   ]
 }

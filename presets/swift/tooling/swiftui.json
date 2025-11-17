@@ -3,9 +3,9 @@
   "description": "SwiftUI-related packages grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "SwiftUI",
       "description": "Group SwiftUI-related packages",
       "groupName": "SwiftUI",
-      "commitMessageTopic": "SwiftUI",
       "matchPackageNames": [
         "https://github.com/pointfreeco/swift-composable-architecture",
         "https://github.com/pointfreeco/swiftui-navigation"

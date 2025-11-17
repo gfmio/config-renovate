@@ -3,12 +3,12 @@
   "description": "Kotlin Coroutines configuration",
   "packageRules": [
     {
+      "commitMessageTopic": "Kotlin Coroutines",
       "description": "Group Kotlin Coroutines dependencies",
+      "groupName": "Kotlin Coroutines",
       "matchPackagePatterns": [
         "^org\\.jetbrains\\.kotlinx:kotlinx-coroutines-"
-      ],
-      "groupName": "Kotlin Coroutines",
-      "commitMessageTopic": "Kotlin Coroutines"
+      ]
     }
   ]
 }

@@ -1,34 +1,10 @@
 {
-  "name": "@gfmio/config-renovate",
-  "version": "0.0.0",
+  "author": {
+    "email": "npm@gfm.io",
+    "name": "Frédérique Mittelstaedt",
+    "url": "https://www.gfm.io"
+  },
   "description": "Composable Renovate configuration presets for various programming languages and project types",
-  "keywords": [
-    "renovate",
-    "renovate-config",
-    "dependency-updates",
-    "automation",
-    "presets"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gfmio/config-renovate.git"
-  },
-  "license": "MIT",
-  "author": "Frédérique Mittelstaedt <github@gfm.io>",
-  "type": "module",
-  "files": [
-    "default.json",
-    "presets/"
-  ],
-  "scripts": {
-    "validate": "bun run validate:json && bun run validate:renovate",
-    "validate:json": "node -e \"const fs=require('fs'); process.exit(require('glob').globSync('**/*.json', {ignore: ['node_modules/**', '.git/**']}).map(f => (console.log('✓', f), JSON.parse(fs.readFileSync(f)))).length ? 0 : 1)\"",
-    "validate:renovate": "renovate-config-validator --strict default.json .github/renovate.json presets/**/*.json examples/*.json",
-    "format": "biome format --write .",
-    "format:check": "biome check .",
-    "lint": "biome lint .",
-    "check": "biome check --error-on-warnings ."
-  },
   "devDependencies": {
     "@biomejs/biome": "^2.3.5",
     "@gfmio/config-biome": "^1.0.2",
@@ -37,6 +13,19 @@
     "glob": "^11.0.3",
     "renovate": "^42.11.0"
   },
+  "files": [
+    "default.json",
+    "presets/"
+  ],
+  "keywords": [
+    "renovate",
+    "renovate-config",
+    "dependency-updates",
+    "automation",
+    "presets"
+  ],
+  "license": "MIT",
+  "name": "@gfmio/config-renovate",
   "peerDependencies": {
     "typescript": "^5"
   },
@@ -47,5 +36,20 @@
         "@gfmio/config-renovate:presets/base"
       ]
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfmio/config-renovate.git"
+  },
+  "scripts": {
+    "check": "biome check --error-on-warnings .",
+    "format": "biome format --write .",
+    "format:check": "biome check .",
+    "lint": "biome lint .",
+    "validate": "bun run validate:json && bun run validate:renovate",
+    "validate:json": "node -e \"const fs=require('fs'); process.exit(require('glob').globSync('**/*.json', {ignore: ['node_modules/**', '.git/**']}).map(f => (console.log('✓', f), JSON.parse(fs.readFileSync(f)))).length ? 0 : 1)\"",
+    "validate:renovate": "renovate-config-validator --strict default.json .github/renovate.json presets/**/*.json examples/*.json"
+  },
+  "type": "module",
+  "version": "0.0.0"
 }

@@ -3,10 +3,12 @@
   "description": "VitePress package grouping",
   "packageRules": [
     {
+      "commitMessageTopic": "VitePress",
       "description": "Group all VitePress packages",
       "groupName": "VitePress",
-      "commitMessageTopic": "VitePress",
-      "matchPackageNames": ["/^vitepress/"]
+      "matchPackageNames": [
+        "/^vitepress/"
+      ]
     }
   ]
 }

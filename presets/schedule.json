@@ -5,10 +5,14 @@
     ":prImmediately",
     ":updateNotScheduled"
   ],
-  "schedule": ["before 6am on Monday"],
-  "prCreation": "immediate",
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on the first day of the month"]
-  }
+    "schedule": [
+      "before 6am on the first day of the month"
+    ]
+  },
+  "prCreation": "immediate",
+  "schedule": [
+    "before 6am on Monday"
+  ]
 }
