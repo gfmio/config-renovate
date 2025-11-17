@@ -625,7 +625,7 @@ Full presets can be customized by adding configuration after the `extends`:
 }
 ```
 
-See [Customization Guide](../customization.md) for more examples.
+You can override any setting from the full presets by adding configuration after the `extends`.
 
 ## Choosing the Right Preset
 
@@ -686,6 +686,4 @@ See [Customization Guide](../customization.md) for more examples.
 ## Related Documentation
 
 - [Architecture](../architecture.md) - Understanding preset composition
-- [Preset Reference](presets.md) - Individual preset details
-- [Customization](../customization.md) - Overriding preset settings
 - [Quick Start](../quick-start.md) - Getting started guide

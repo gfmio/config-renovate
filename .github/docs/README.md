@@ -6,21 +6,11 @@ Internal documentation for developing and maintaining @gfmio/config-renovate.
 
 ### Architecture & Design
 
-- [Architecture Overview](architecture.md) - System architecture and design patterns
-- [Preset Specifications](presets.md) - Complete preset inventory and specifications
-- [Design Decisions](decisions.md) - Rationale behind key choices
+- [Naming Conventions](naming-conventions.md) - File and preset naming standards
 
 ### Development
 
-- [Development Setup](development.md) - Local development environment
-- [Testing Guide](testing.md) - Testing and validation procedures
-- [Release Process](release.md) - Publishing and versioning
-
-### Maintenance
-
-- [Workflows](workflows.md) - CI/CD pipeline documentation
-- [Validation](validation.md) - Configuration validation details
-- [Troubleshooting](troubleshooting.md) - Common development issues
+See the main [Contributing Guide](../../CONTRIBUTING.md) for development setup, testing, and release process.
 
 ## Quick Reference
 

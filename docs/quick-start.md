@@ -166,7 +166,7 @@ Need to adjust the defaults? Add your overrides:
 }
 ```
 
-See [Customization Guide](customization.md) for more examples.
+You can override any setting from the full presets by adding configuration after the `extends`.
 
 ## Common Scenarios
 
@@ -217,8 +217,7 @@ Options:
 ## Next Steps
 
 - ✅ **Working well?** You're done! Renovate will keep your dependencies updated.
-- 🔧 **Need customization?** See [Customization Guide](customization.md)
-- 🏗️ **Want more control?** Learn about [Preset Composition](composition.md)
+- 🏗️ **Want more control?** Learn about [Architecture](architecture.md)
 - 🔐 **Private packages?** Configure [Authentication](https://docs.renovatebot.com/getting-started/private-packages/)
 
 ## Troubleshooting
@@ -262,7 +261,7 @@ Ensure:
 3. CI/checks are passing
 4. Update is minor or patch (not major)
 
-See [Automerge Guide](automerge.md) for details.
+Check the [Renovate automerge documentation](https://docs.renovatebot.com/key-concepts/automerge/) for details.
 
 ## Getting Help
 

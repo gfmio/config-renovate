@@ -419,6 +419,5 @@ More specific layers override more general ones:
 
 **Next Steps:**
 
-- [Learn about preset composition](composition.md)
-- [Explore customization options](customization.md)
-- [Review preset reference](reference/presets.md)
+- [Review full presets reference](reference/full-presets.md)
+- [Quick Start Guide](quick-start.md)
