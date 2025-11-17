@@ -785,27 +785,33 @@ Don't restrict security patches with schedules:
 
 ### Naming Conventions
 
-#### Preset Files
+All presets must follow standardized naming conventions. See [Naming Conventions Guide](.github/docs/naming-conventions.md) for complete details.
 
-- Use lowercase with hyphens: `spring-boot.json`
-- Base presets: `base.json`
-- Project types: `library.json`, `app.json`, `cli.json`
+#### Quick Reference
+
+**Preset Files:**
+
+- Lowercase with hyphens: `spring-boot.json`
+- Base: Always `base.json`
+- Project types: `library.json`, `app.json`, `cli.json` (standardized)
 - Tooling: `tooling/<tool-name>.json`
+- Full: `<language>-<type>.json`
 
-#### Group Names
+**Group Names:**
 
-- Use title case: `"groupName": "Spring Boot"`
-- Be specific: `"TypeScript"` not `"TS"`
-- Indicate scope: `"React packages"` not just `"React"`
+- Title Case: `"Spring Boot"`, `"TypeScript"`, `"React"`
+- Be specific and user-friendly
+- Follow ecosystem conventions (e.g., `"pytest"` lowercase in Python)
 
-#### Descriptions
+**Descriptions:**
 
-- Start with capital letter
-- Use active voice
-- Be concise but clear
+- Sentence case, no ending period
 - Explain **why**, not just **what**
+- Be specific about impact
 
-**Good:**
+**Examples:**
+
+Good:
 
 ```json
 {
@@ -813,13 +819,15 @@ Don't restrict security patches with schedules:
 }
 ```
 
-**Bad:**
+Bad:
 
 ```json
 {
   "description": "react packages"
 }
 ```
+
+**Note**: Some ecosystems have specialized naming (e.g., Rust uses `binary.json` reflecting crate terminology). See the naming conventions guide for rationale
 
 ## Language-Specific Considerations
 
