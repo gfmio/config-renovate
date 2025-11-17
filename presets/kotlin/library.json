@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Kotlin/Java library configuration for packages published to Maven Central",
+  "extends": [
+    "github>gfmio/config-renovate:presets/kotlin/base"
+  ],
+  "packageRules": [
+    {
+      "description": "Use version ranges for libraries to maximize compatibility",
+      "matchManagers": [
+        "gradle",
+        "gradle-wrapper",
+        "maven"
+      ],
+      "rangeStrategy": "bump"
+    },
+    {
+      "description": "Enable semantic commits for library versioning",
+      "matchManagers": [
+        "gradle",
+        "gradle-wrapper",
+        "maven"
+      ],
+      "semanticCommitScope": "deps",
+      "semanticCommits": "enabled",
+      "semanticCommitType": "chore"
+    }
+  ]
+}

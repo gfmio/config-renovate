@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for Cloudflare Workers with Wrangler",
+  "extends": [
+    "@gfmio/config-renovate:presets/base",
+    "@gfmio/config-renovate:presets/security",
+    "@gfmio/config-renovate:presets/automerge",
+    "@gfmio/config-renovate:presets/schedule",
+    "@gfmio/config-renovate:presets/javascript/base",
+    "@gfmio/config-renovate:presets/javascript/cloudflare-workers",
+    "@gfmio/config-renovate:presets/javascript/tooling/typescript",
+    "@gfmio/config-renovate:presets/javascript/tooling/vitest",
+    "@gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}

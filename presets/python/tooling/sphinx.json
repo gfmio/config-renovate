@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Sphinx documentation generator package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Sphinx",
+      "description": "Group Sphinx and extensions",
+      "groupName": "Sphinx",
+      "matchPackageNames": [
+        "sphinx",
+        "/^sphinx-/",
+        "/^sphinxcontrib-/"
+      ]
+    }
+  ]
+}

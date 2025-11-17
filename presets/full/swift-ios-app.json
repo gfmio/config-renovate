@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for iOS/macOS applications with SwiftUI",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base",
+    "github>gfmio/config-renovate:presets/security",
+    "github>gfmio/config-renovate:presets/automerge",
+    "github>gfmio/config-renovate:presets/schedule",
+    "github>gfmio/config-renovate:presets/swift/base",
+    "github>gfmio/config-renovate:presets/swift/ios",
+    "github>gfmio/config-renovate:presets/swift/tooling/swiftui",
+    "github>gfmio/config-renovate:presets/swift/tooling/alamofire",
+    "github>gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}

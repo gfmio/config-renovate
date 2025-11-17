@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Rust web service using full preset with stability days",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/rust-web-service"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "axum",
+        "tokio"
+      ],
+      "minimumReleaseAge": "3 days"
+    }
+  ]
+}

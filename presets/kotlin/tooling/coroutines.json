@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Kotlin Coroutines configuration",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Kotlin Coroutines",
+      "description": "Group Kotlin Coroutines dependencies",
+      "groupName": "Kotlin Coroutines",
+      "matchPackagePatterns": [
+        "^org\\.jetbrains\\.kotlinx:kotlinx-coroutines-"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Vitest package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Vitest",
+      "description": "Group all Vitest packages",
+      "groupName": "Vitest",
+      "matchPackageNames": [
+        "/^vitest/",
+        "/^@vitest\\//"
+      ]
+    }
+  ]
+}

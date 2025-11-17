@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessageAction": "update",
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageTopic": "{{depName}}",
+  "description": "Configuration for Rust library crates published to crates.io",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable"
+  ],
+  "packageRules": [
+    {
+      "description": "Use version ranges for libraries (SemVer compatible)",
+      "matchManagers": [
+        "cargo"
+      ],
+      "rangeStrategy": "bump"
+    }
+  ]
+}

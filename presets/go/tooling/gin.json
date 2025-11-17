@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Gin web framework package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Gin",
+      "description": "Group Gin packages",
+      "groupName": "Gin",
+      "matchPackageNames": [
+        "github.com/gin-gonic/gin"
+      ]
+    }
+  ]
+}

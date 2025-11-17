@@ -1,0 +1,34 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessagePrefix": "chore(deps):",
+  "description": "Configuration for Rust WASM projects (wasm-pack, wasm-bindgen)",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "WASM",
+      "description": "Group WASM-related crates",
+      "groupName": "WASM",
+      "matchPackageNames": [
+        "wasm-bindgen",
+        "wasm-bindgen-futures",
+        "wasm-bindgen-test",
+        "js-sys",
+        "web-sys",
+        "wasm-pack"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Separate major wasm-bindgen updates (often breaking)",
+      "matchPackageNames": [
+        "wasm-bindgen"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ]
+}

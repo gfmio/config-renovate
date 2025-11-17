@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Clap CLI framework package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Clap",
+      "description": "Group Clap packages",
+      "groupName": "Clap",
+      "matchPackageNames": [
+        "clap",
+        "clap_derive",
+        "clap_complete"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Separate major Clap updates (breaking CLI changes)",
+      "matchPackageNames": [
+        "clap"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Base Python configuration for pip/poetry/pipenv/pdm/uv projects",
+  "extends": [
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "Python",
+      "description": "Group Python version updates",
+      "groupName": "Python version",
+      "matchDatasources": [
+        "python-version"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Separate major Python version updates",
+      "matchDatasources": [
+        "python-version"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "commitMessageTopic": "Python dev dependencies",
+      "description": "Group dev dependencies for cleaner PRs",
+      "groupName": "Python dev dependencies",
+      "matchDepTypes": [
+        "dev-dependencies"
+      ]
+    }
+  ]
+}

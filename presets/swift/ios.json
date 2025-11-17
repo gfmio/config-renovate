@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessagePrefix": "chore(deps):",
+  "description": "Configuration for iOS/macOS applications with platform-specific considerations",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "iOS/macOS UI",
+      "description": "Group iOS/macOS UI frameworks",
+      "groupName": "iOS/macOS UI",
+      "matchPackageNames": [
+        "https://github.com/apple/swift-ui",
+        "https://github.com/apple/swift-composable-architecture"
+      ]
+    },
+    {
+      "description": "Be cautious with major updates for stability",
+      "matchManagers": [
+        "swift"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "3 days"
+    }
+  ]
+}

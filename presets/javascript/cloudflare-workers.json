@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Cloudflare Workers specific configuration",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Cloudflare Workers",
+      "description": "Group Cloudflare Workers packages",
+      "groupName": "Cloudflare Workers",
+      "matchPackageNames": [
+        "/^@cloudflare\\//",
+        "wrangler",
+        "miniflare"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Separate major Wrangler updates",
+      "matchPackageNames": [
+        "wrangler"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ]
+}

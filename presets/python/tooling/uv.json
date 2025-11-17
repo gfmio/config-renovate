@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "uv package manager specific configuration",
+  "packageRules": [
+    {
+      "commitMessageTopic": "uv",
+      "description": "Group uv packages",
+      "groupName": "uv",
+      "matchPackageNames": [
+        "uv"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Separate major uv updates",
+      "matchPackageNames": [
+        "uv"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ]
+}

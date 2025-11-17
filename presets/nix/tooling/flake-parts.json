@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "flake-parts modular flake framework",
+  "packageRules": [
+    {
+      "commitMessageTopic": "flake-parts",
+      "description": "Group flake-parts and related inputs",
+      "groupName": "flake-parts",
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "flake-parts",
+        "flake-root",
+        "treefmt-nix"
+      ]
+    }
+  ]
+}

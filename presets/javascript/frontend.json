@@ -1,0 +1,58 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessagePrefix": "chore(deps):",
+  "description": "Frontend framework configuration (React, Vue, Svelte, etc.)",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "React",
+      "description": "Group React packages",
+      "groupName": "React",
+      "matchPackageNames": [
+        "/^react/",
+        "/^@types\\/react/"
+      ]
+    },
+    {
+      "commitMessageTopic": "Vue",
+      "description": "Group Vue packages",
+      "groupName": "Vue",
+      "matchPackageNames": [
+        "/^vue/",
+        "/^@vue\\//"
+      ]
+    },
+    {
+      "commitMessageTopic": "Svelte",
+      "description": "Group Svelte packages",
+      "groupName": "Svelte",
+      "matchPackageNames": [
+        "/^svelte/",
+        "/^@sveltejs\\//"
+      ]
+    },
+    {
+      "commitMessageTopic": "Next.js",
+      "description": "Group Next.js packages",
+      "groupName": "Next.js",
+      "matchPackageNames": [
+        "/^next/",
+        "eslint-config-next"
+      ]
+    },
+    {
+      "commitMessageTopic": "Vite",
+      "description": "Group Vite packages",
+      "groupName": "Vite",
+      "matchPackageNames": [
+        "/^vite/",
+        "/^@vitejs\\//"
+      ]
+    }
+  ]
+}

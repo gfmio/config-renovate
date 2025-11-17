@@ -1,0 +1,47 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Kotlin and Java testing frameworks",
+  "packageRules": [
+    {
+      "commitMessageTopic": "JUnit",
+      "description": "Group JUnit dependencies",
+      "groupName": "JUnit",
+      "matchPackagePatterns": [
+        "^org\\.junit\\.jupiter:",
+        "^org\\.junit\\.platform:"
+      ]
+    },
+    {
+      "commitMessageTopic": "Kotest",
+      "description": "Group Kotest dependencies",
+      "groupName": "Kotest",
+      "matchPackagePatterns": [
+        "^io\\.kotest:"
+      ]
+    },
+    {
+      "commitMessageTopic": "MockK",
+      "description": "Group MockK dependencies",
+      "groupName": "MockK",
+      "matchPackagePatterns": [
+        "^io\\.mockk:"
+      ]
+    },
+    {
+      "commitMessageTopic": "Mockito",
+      "description": "Group Mockito dependencies",
+      "groupName": "Mockito",
+      "matchPackagePatterns": [
+        "^org\\.mockito:"
+      ]
+    },
+    {
+      "commitMessageTopic": "AssertJ",
+      "description": "Group AssertJ dependencies",
+      "groupName": "AssertJ",
+      "matchPackagePatterns": [
+        "^org\\.assertj:"
+      ]
+    }
+  ]
+}

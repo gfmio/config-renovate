@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "devenv.sh development environment framework",
+  "packageRules": [
+    {
+      "commitMessageTopic": "devenv",
+      "description": "Group devenv flake input",
+      "groupName": "devenv",
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "devenv"
+      ]
+    }
+  ]
+}

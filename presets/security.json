@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Security-focused configuration for vulnerability alerts and security patches",
+  "packageRules": [
+    {
+      "automerge": true,
+      "automergeStrategy": "squash",
+      "automergeType": "pr",
+      "description": "Automerge security patches for stable versions (not 0.x)",
+      "matchCurrentVersion": "!/^0/",
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "automerge": true,
+    "labels": [
+      "security"
+    ],
+    "schedule": [
+      "at any time"
+    ]
+  }
+}

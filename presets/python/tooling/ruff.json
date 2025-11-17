@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Ruff linter and formatter package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Ruff",
+      "description": "Group Ruff packages",
+      "groupName": "Ruff",
+      "matchPackageNames": [
+        "ruff",
+        "ruff-lsp"
+      ]
+    }
+  ]
+}

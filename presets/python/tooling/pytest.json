@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "pytest testing framework package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "pytest",
+      "description": "Group all pytest packages",
+      "groupName": "pytest",
+      "matchPackageNames": [
+        "pytest",
+        "/^pytest-/"
+      ]
+    }
+  ]
+}

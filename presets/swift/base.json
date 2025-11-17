@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Base Swift configuration for Swift Package Manager projects",
+  "extends": [
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "Swift toolchain",
+      "description": "Group Swift toolchain updates",
+      "groupName": "Swift toolchain",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "swift"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Separate major Swift version updates",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "swift"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "description": "Handle Swift Package Manager dependencies",
+      "matchManagers": [
+        "swift"
+      ],
+      "rangeStrategy": "bump"
+    }
+  ]
+}

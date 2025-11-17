@@ -1,0 +1,68 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Android application configuration with Android-specific tooling",
+  "extends": [
+    "github>gfmio/config-renovate:presets/kotlin/app"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "Android Gradle Plugin",
+      "description": "Group Android Gradle Plugin updates",
+      "groupName": "Android Gradle Plugin",
+      "matchPackageNames": [
+        "com.android.tools.build:gradle",
+        "com.android.application",
+        "com.android.library"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Separate major Android Gradle Plugin updates",
+      "matchPackageNames": [
+        "com.android.tools.build:gradle",
+        "com.android.application",
+        "com.android.library"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "commitMessageTopic": "AndroidX",
+      "description": "Group AndroidX libraries",
+      "groupName": "AndroidX",
+      "matchPackageNames": [
+        "/^androidx\\./",
+        "/^com\\.google\\.android\\.material/"
+      ]
+    },
+    {
+      "description": "Add stability days for major AndroidX updates",
+      "matchPackageNames": [
+        "/^androidx\\./",
+        "/^com\\.google\\.android\\.material/"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "commitMessageTopic": "Compose",
+      "description": "Group Compose libraries",
+      "groupName": "Compose",
+      "matchPackageNames": [
+        "/^androidx\\.compose\\./",
+        "/^org\\.jetbrains\\.compose\\./"
+      ]
+    },
+    {
+      "description": "Add stability days for Compose (can have early bugs)",
+      "matchPackageNames": [
+        "/^androidx\\.compose\\./",
+        "/^org\\.jetbrains\\.compose\\./"
+      ],
+      "minimumReleaseAge": "3 days"
+    }
+  ]
+}

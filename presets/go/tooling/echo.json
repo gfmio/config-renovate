@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Echo web framework package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Echo",
+      "description": "Group Echo packages",
+      "groupName": "Echo",
+      "matchPackageNames": [
+        "github.com/labstack/echo/v4",
+        "github.com/labstack/echo"
+      ]
+    }
+  ]
+}

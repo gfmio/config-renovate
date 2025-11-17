@@ -1,0 +1,23 @@
+{
+  "aliveStatusCodes": [
+    200,
+    206
+  ],
+  "fallbackRetryDelay": "30s",
+  "httpHeaders": [],
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://docs.renovatebot.com"
+    },
+    {
+      "pattern": "^https://www.npmjs.com/package/@gfmio/config-renovate"
+    }
+  ],
+  "replacementPatterns": [],
+  "retryCount": 3,
+  "retryOn429": true,
+  "timeout": "20s"
+}

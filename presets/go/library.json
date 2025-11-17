@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessageAction": "update",
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageTopic": "{{depName}}",
+  "description": "Configuration for Go library packages",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable"
+  ],
+  "packageRules": [
+    {
+      "description": "Libraries should use compatible version ranges when possible",
+      "matchManagers": [
+        "gomod"
+      ],
+      "rangeStrategy": "bump"
+    }
+  ]
+}

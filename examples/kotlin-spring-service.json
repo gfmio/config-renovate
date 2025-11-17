@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Kotlin Spring Boot service with custom grouping",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/kotlin-spring-service"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Spring Cloud",
+      "matchPackageNames": [
+        "/^org\\.springframework\\.cloud:/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessageAction": "update",
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageTopic": "{{depName}}",
+  "description": "Configuration for Swift applications and command-line tools",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable"
+  ],
+  "packageRules": [
+    {
+      "description": "Applications can use latest versions",
+      "matchManagers": [
+        "swift"
+      ],
+      "rangeStrategy": "bump"
+    }
+  ]
+}

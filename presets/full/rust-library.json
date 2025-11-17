@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for Rust library crates with Serde and Tokio",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base",
+    "github>gfmio/config-renovate:presets/security",
+    "github>gfmio/config-renovate:presets/automerge",
+    "github>gfmio/config-renovate:presets/schedule",
+    "github>gfmio/config-renovate:presets/rust/base",
+    "github>gfmio/config-renovate:presets/rust/library",
+    "github>gfmio/config-renovate:presets/rust/tooling/serde",
+    "github>gfmio/config-renovate:presets/rust/tooling/tokio",
+    "github>gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}

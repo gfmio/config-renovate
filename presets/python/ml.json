@@ -1,0 +1,96 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessagePrefix": "chore(deps):",
+  "description": "Configuration for ML/AI/LLM projects (PyTorch, TensorFlow, Transformers, etc.)",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "PyTorch",
+      "description": "Group PyTorch packages",
+      "groupName": "PyTorch",
+      "matchPackageNames": [
+        "torch",
+        "torchvision",
+        "torchaudio",
+        "torchtext",
+        "/^torch/"
+      ]
+    },
+    {
+      "commitMessageTopic": "TensorFlow",
+      "description": "Group TensorFlow packages",
+      "groupName": "TensorFlow",
+      "matchPackageNames": [
+        "tensorflow",
+        "tensorflow-gpu",
+        "tensorflow-datasets",
+        "tensorflow-hub",
+        "/^tensorflow-/"
+      ]
+    },
+    {
+      "commitMessageTopic": "Hugging Face",
+      "description": "Group Hugging Face packages",
+      "groupName": "Hugging Face",
+      "matchPackageNames": [
+        "transformers",
+        "datasets",
+        "tokenizers",
+        "accelerate",
+        "diffusers",
+        "peft",
+        "evaluate"
+      ]
+    },
+    {
+      "commitMessageTopic": "LangChain",
+      "description": "Group LangChain packages",
+      "groupName": "LangChain",
+      "matchPackageNames": [
+        "/^langchain/",
+        "/^langsmith/",
+        "langgraph"
+      ]
+    },
+    {
+      "commitMessageTopic": "ML/Data Science libraries",
+      "description": "Group common ML libraries",
+      "groupName": "ML/Data Science libraries",
+      "matchPackageNames": [
+        "numpy",
+        "pandas",
+        "scikit-learn",
+        "scipy",
+        "matplotlib",
+        "seaborn"
+      ]
+    },
+    {
+      "automerge": false,
+      "dependencyDashboardApproval": true,
+      "description": "Careful with major ML framework updates (often breaking)",
+      "matchPackageNames": [
+        "torch",
+        "tensorflow",
+        "transformers",
+        "/^langchain/"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "description": "Add stability days for ML packages (often have early bugs)",
+      "matchPackageNames": [
+        "torch",
+        "tensorflow",
+        "transformers",
+        "/^langchain/"
+      ],
+      "minimumReleaseAge": "3 days"
+    }
+  ]
+}

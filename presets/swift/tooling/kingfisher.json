@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Kingfisher image loading library package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Kingfisher",
+      "description": "Group Kingfisher packages",
+      "groupName": "Kingfisher",
+      "matchPackageNames": [
+        "https://github.com/onevcat/Kingfisher"
+      ]
+    }
+  ]
+}

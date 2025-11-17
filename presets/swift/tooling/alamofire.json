@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Alamofire HTTP networking library package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Alamofire",
+      "description": "Group Alamofire packages",
+      "groupName": "Alamofire",
+      "matchPackageNames": [
+        "https://github.com/Alamofire/Alamofire"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Base JavaScript/TypeScript configuration for npm/yarn/pnpm/bun projects",
+  "extends": [
+    ":ignoreModulesAndTests",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "linting tools",
+      "description": "Group all linting tools",
+      "groupName": "Linting tools",
+      "matchPackageNames": [
+        "markdownlint-cli2",
+        "yamllint",
+        "taplo",
+        "commitlint",
+        "@commitlint/cli",
+        "@commitlint/config-conventional"
+      ]
+    },
+    {
+      "commitMessageTopic": "documentation tools",
+      "description": "Group all documentation tools",
+      "groupName": "Documentation tools",
+      "matchPackageNames": [
+        "typedoc",
+        "@types/node"
+      ]
+    }
+  ],
+  "rangeStrategy": "bump"
+}

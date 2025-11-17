@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Bun runtime-specific configuration with careful major version handling",
+  "packageRules": [
+    {
+      "automerge": false,
+      "commitMessageTopic": "Bun (major)",
+      "description": "Separate major Bun updates for careful review",
+      "groupName": "Bun (major)",
+      "matchPackageNames": [
+        "bun"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "automerge": true,
+      "automergeStrategy": "squash",
+      "automergeType": "pr",
+      "description": "Automerge Bun patch updates",
+      "matchPackageNames": [
+        "bun"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    }
+  ]
+}

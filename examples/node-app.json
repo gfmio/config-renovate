@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Node.js app using full preset with disabled automerge",
+  "extends": [
+    "@gfmio/config-renovate:presets/full/node-app"
+  ],
+  "packageRules": [
+    {
+      "automerge": false,
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    }
+  ]
+}

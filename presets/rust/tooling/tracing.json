@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Tracing instrumentation framework package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Tracing",
+      "description": "Group all Tracing packages",
+      "groupName": "Tracing",
+      "matchPackageNames": [
+        "tracing",
+        "tracing-subscriber",
+        "tracing-futures",
+        "/^tracing-/"
+      ]
+    }
+  ]
+}

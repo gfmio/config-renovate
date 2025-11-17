@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Example: Python library using full preset with custom grouping",
+  "extends": [
+    "github>gfmio/config-renovate:presets/full/python-library"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "Pydantic",
+      "groupName": "Pydantic",
+      "matchPackageNames": [
+        "pydantic",
+        "pydantic-core"
+      ]
+    }
+  ]
+}

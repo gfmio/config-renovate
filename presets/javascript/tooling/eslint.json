@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "ESLint package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "ESLint",
+      "description": "Group all ESLint packages",
+      "groupName": "ESLint",
+      "matchPackageNames": [
+        "/^eslint/",
+        "/^@eslint\\//"
+      ]
+    }
+  ]
+}

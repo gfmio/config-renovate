@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Testify testing framework package grouping",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Testify",
+      "description": "Group Testify packages",
+      "groupName": "Testify",
+      "matchPackageNames": [
+        "github.com/stretchr/testify"
+      ]
+    }
+  ]
+}

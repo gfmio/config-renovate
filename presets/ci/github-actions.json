@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "GitHub Actions configuration with automerge",
+  "packageRules": [
+    {
+      "automerge": true,
+      "automergeStrategy": "squash",
+      "automergeType": "pr",
+      "commitMessageTopic": "GitHub Actions",
+      "description": "Group GitHub Actions updates and automerge",
+      "groupName": "GitHub Actions",
+      "matchManagers": [
+        "github-actions"
+      ]
+    }
+  ]
+}

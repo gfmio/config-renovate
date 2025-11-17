@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Nix development shell configuration",
+  "extends": [
+    "github>gfmio/config-renovate:presets/nix/flake"
+  ],
+  "packageRules": [
+    {
+      "commitMessageTopic": "Nix devShell utilities",
+      "description": "Group devShell-related flake inputs",
+      "groupName": "Nix devShell utilities",
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "devshell",
+        "flake-utils",
+        "flake-compat"
+      ]
+    }
+  ]
+}

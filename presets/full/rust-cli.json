@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Complete preset for Rust CLI applications with Clap",
+  "extends": [
+    "github>gfmio/config-renovate:presets/base",
+    "github>gfmio/config-renovate:presets/security",
+    "github>gfmio/config-renovate:presets/automerge",
+    "github>gfmio/config-renovate:presets/schedule",
+    "github>gfmio/config-renovate:presets/rust/base",
+    "github>gfmio/config-renovate:presets/rust/binary",
+    "github>gfmio/config-renovate:presets/rust/tooling/clap",
+    "github>gfmio/config-renovate:presets/rust/tooling/serde",
+    "github>gfmio/config-renovate:presets/ci/github-actions"
+  ]
+}

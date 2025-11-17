@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Monorepo-specific configuration for workspaces and multiple packages",
+  "extends": [
+    "group:monorepos",
+    ":combinePatchMinorReleases"
+  ],
+  "packageRules": [
+    {
+      "description": "Group workspace protocol dependencies",
+      "enabled": false,
+      "matchDepTypes": [
+        "workspace"
+      ]
+    },
+    {
+      "description": "Higher PR limits for monorepos with many dependencies",
+      "matchManagers": [
+        "npm",
+        "yarn",
+        "pnpm",
+        "bun"
+      ],
+      "prConcurrentLimit": 20,
+      "prHourlyLimit": 4
+    }
+  ]
+}

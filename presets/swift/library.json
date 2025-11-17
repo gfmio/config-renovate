@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessageAction": "update",
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageTopic": "{{depName}}",
+  "description": "Configuration for Swift library packages",
+  "extends": [
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable"
+  ],
+  "packageRules": [
+    {
+      "description": "Use version ranges for libraries (SemVer compatible)",
+      "matchManagers": [
+        "swift"
+      ],
+      "rangeStrategy": "bump"
+    }
+  ]
+}
