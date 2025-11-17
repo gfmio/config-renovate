@@ -26,9 +26,6 @@
   ],
   "license": "MIT",
   "name": "@gfmio/config-renovate",
-  "peerDependencies": {
-    "typescript": "^5"
-  },
   "renovate-config": {
     "default": {
       "description": "Default preset - includes base config only",
