@@ -28,7 +28,7 @@
     {
       "description": "Group flake inputs by source",
       "matchManagers": ["nix"],
-      "excludePackageNames": ["nixpkgs"],
+      "matchPackageNames": ["!nixpkgs"],
       "groupName": "Nix flake inputs",
       "commitMessageTopic": "Nix flake inputs"
     }

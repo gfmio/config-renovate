@@ -12,6 +12,7 @@
     },
     {
       "description": "Enable semantic commits for library versioning",
+      "matchManagers": ["gradle", "gradle-wrapper", "maven"],
       "semanticCommits": "enabled",
       "semanticCommitType": "chore",
       "semanticCommitScope": "deps"

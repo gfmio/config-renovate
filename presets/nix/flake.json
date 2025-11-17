@@ -15,7 +15,7 @@
     {
       "description": "Group all flake.lock updates together",
       "matchManagers": ["nix"],
-      "matchFiles": ["flake.lock"],
+      "matchFileNames": ["flake.lock"],
       "groupName": "Nix flake.lock",
       "commitMessageTopic": "Nix flake.lock"
     }

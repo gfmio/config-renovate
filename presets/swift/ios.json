@@ -20,7 +20,7 @@
       "description": "Be cautious with major updates for stability",
       "matchManagers": ["swift"],
       "matchUpdateTypes": ["major"],
-      "stabilityDays": 3
+      "minimumReleaseAge": "3 days"
     }
   ]
 }

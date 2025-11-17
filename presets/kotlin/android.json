@@ -27,38 +27,38 @@
     },
     {
       "description": "Group AndroidX libraries",
-      "matchPackagePatterns": [
-        "^androidx\\.",
-        "^com\\.google\\.android\\.material"
+      "matchPackageNames": [
+        "/^androidx\\./",
+        "/^com\\.google\\.android\\.material/"
       ],
       "groupName": "AndroidX",
       "commitMessageTopic": "AndroidX"
     },
     {
       "description": "Add stability days for major AndroidX updates",
-      "matchPackagePatterns": [
-        "^androidx\\.",
-        "^com\\.google\\.android\\.material"
+      "matchPackageNames": [
+        "/^androidx\\./",
+        "/^com\\.google\\.android\\.material/"
       ],
       "matchUpdateTypes": ["major"],
-      "stabilityDays": 3
+      "minimumReleaseAge": "3 days"
     },
     {
       "description": "Group Compose libraries",
-      "matchPackagePatterns": [
-        "^androidx\\.compose\\.",
-        "^org\\.jetbrains\\.compose\\."
+      "matchPackageNames": [
+        "/^androidx\\.compose\\./",
+        "/^org\\.jetbrains\\.compose\\./"
       ],
       "groupName": "Compose",
       "commitMessageTopic": "Compose"
     },
     {
       "description": "Add stability days for Compose (can have early bugs)",
-      "matchPackagePatterns": [
-        "^androidx\\.compose\\.",
-        "^org\\.jetbrains\\.compose\\."
+      "matchPackageNames": [
+        "/^androidx\\.compose\\./",
+        "/^org\\.jetbrains\\.compose\\./"
       ],
-      "stabilityDays": 3
+      "minimumReleaseAge": "3 days"
     }
   ]
 }

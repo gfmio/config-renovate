@@ -9,7 +9,7 @@
       "matchManagers": ["nix"],
       "matchPackageNames": ["nixpkgs"],
       "matchUpdateTypes": ["major"],
-      "stabilityDays": 14
+      "minimumReleaseAge": "14 days"
     }
   ]
 }
