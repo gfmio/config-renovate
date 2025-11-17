@@ -23,7 +23,7 @@
   "scripts": {
     "validate": "bun run validate:json && bun run validate:renovate",
     "validate:json": "node -e \"const fs=require('fs'); process.exit(require('glob').globSync('**/*.json', {ignore: ['node_modules/**', '.git/**']}).map(f => (console.log('✓', f), JSON.parse(fs.readFileSync(f)))).length ? 0 : 1)\"",
-    "validate:renovate": "npx --yes renovate-config-validator --strict default.json renovate.json 'presets/**/*.json' 'examples/**/*.json'",
+    "validate:renovate": "renovate-config-validator --strict default.json .github/renovate.json presets/**/*.json examples/*.json",
     "format": "biome format --write .",
     "format:check": "biome check .",
     "lint": "biome lint .",
@@ -33,7 +33,9 @@
     "@biomejs/biome": "^2.3.5",
     "@gfmio/config-biome": "^1.0.2",
     "@gfmio/config-commitlint": "^1.0.1",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "glob": "^11.0.3",
+    "renovate": "^42.11.0"
   },
   "peerDependencies": {
     "typescript": "^5"
